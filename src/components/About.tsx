@@ -37,9 +37,12 @@ const About = () => {
             <div className="relative">
               <img 
                 src="/lovable-uploads/25be2e1e-5bb0-4369-a7bd-c6bdd1cf0ba8.png" 
-                alt="Profile photo" 
+                alt="Profile photo at Alcatraz Island" 
                 className="w-full h-auto object-cover"
               />
+              <div className="bg-white py-2 px-4 text-center text-gray-700">
+                <p className="italic">Visiting Alcatraz Island</p>
+              </div>
             </div>
           </Card>
           
@@ -63,11 +66,11 @@ const About = () => {
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="font-medium text-gray-900 min-w-24">Born:</span>
+                <span className="font-medium text-gray-900 min-w-28">Born:</span>
                 <span className="text-gray-700">Shenzhen, China</span>
               </li>
               <li className="flex items-start">
-                <span className="font-medium text-gray-900 min-w-24">Education:</span>
+                <span className="font-medium text-gray-900 min-w-28">Education:</span>
                 <div className="text-gray-700">
                   <div>BS in Computer Science (UC Irvine)</div>
                   <div>MS in Computer Science (Rice University)</div>
@@ -75,11 +78,11 @@ const About = () => {
                 </div>
               </li>
               <li className="flex items-start">
-                <span className="font-medium text-gray-900 min-w-24">Current Role:</span>
+                <span className="font-medium text-gray-900 min-w-28">Current Role:</span>
                 <span className="text-gray-700">Software Engineer at BILL</span>
               </li>
               <li className="flex items-start">
-                <span className="font-medium text-gray-900 min-w-24">Next Chapter:</span>
+                <span className="font-medium text-gray-900 min-w-28">Next Chapter:</span>
                 <span className="text-gray-700">From Engineer to Investor in Hong Kong</span>
               </li>
             </ul>
