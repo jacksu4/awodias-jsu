@@ -57,6 +57,9 @@ const About = () => {
             <p className="text-lg text-gray-700 leading-relaxed">
               Currently working at BILL (NYSE: BILL) in fintech industry, I'm preparing to transition into investment and relocate to Hong Kong. This career shift allows me to combine my technical expertise with my passion for finance and business strategy. I'm excited about this new chapter that will leverage both my engineering background and investment interests.
             </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              This next chapter is about integration — of tech, finance, and global perspective. I'm always open to connecting with people who think differently and build boldly.
+            </p>
           </div>
         </div>
         
