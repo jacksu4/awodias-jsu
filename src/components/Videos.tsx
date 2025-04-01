@@ -15,11 +15,11 @@ const Videos = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-            Watch Me in Action
+            Videos
           </h2>
           <div className="w-20 h-1 bg-mountain-blue mx-auto"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            See my athletic side through these videos of me playing basketball and table tennis
+            My athletic highlights
           </p>
         </div>
 
