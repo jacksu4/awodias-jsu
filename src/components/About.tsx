@@ -48,13 +48,10 @@ const About = () => {
           {/* Bio Information */}
           <div className="space-y-6 lg:col-span-8">
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a 25-year-old Software Engineer originally from Shenzhen, China, and currently based in Bay Area, California. I moved to the United States for my education, completing my undergraduate degree at UC Irvine and Master's at Rice University, both in Computer Science.
+              I'm a 25-year-old Software Engineer from Shenzhen, China, now living in the Bay Area. I earned my Computer Science degrees from UC Irvine (BS) and Rice University (MS).
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Currently, I work as a Software Engineer at BILL (NYSE: BILL), where I've been developing innovative solutions for the financial technology industry. I'm also preparing for an exciting transition as an incoming investor planning to relocate to Hong Kong soon.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              While establishing my investment company in Hong Kong, I'll be attending the HKU MBA program part-time to enhance my communication, business, and finance skills. Additionally, I'm currently preparing for the CFA Level 2 exam taking place this May.
+              Currently working at BILL (NYSE: BILL) in fintech, I'm preparing to transition into investment and relocate to Hong Kong, where I'll establish an investment company while pursuing a part-time MBA at HKU and studying for my CFA Level 2 exam.
             </p>
             
             {/* Quick Facts and Interests */}
