@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: awodias.org
+Check out my personal website: [awodias.org](https://awodias.org)
 
 **Use Lovable**
 
