@@ -22,9 +22,9 @@ const Gallery = () => {
       caption: "Exploring autumn nature trails in North Michigan"
     },
     {
-      src: "/lovable-uploads/b32b58b1-af99-4dd2-9b70-ed6c0b266e3a.png",
-      alt: "London",
-      caption: "Travelling to London"
+      src: "/lovable-uploads/d28c42fc-3696-4758-8e4a-fd9eac50dfa0.png",
+      alt: "Emirates Stadium",
+      caption: "Emirates Stadium tour in London"
     },
     {
       src: "/lovable-uploads/2403784e-c75b-4ac4-8454-06bda4caeaf0.png",
