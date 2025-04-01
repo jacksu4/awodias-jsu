@@ -41,6 +41,11 @@ const Gallery = () => {
       alt: "Basketball",
       caption: "Balling with teammates"
     },
+    {
+      src: "/lovable-uploads/2403784e-c75b-4ac4-8454-06bda4caeaf0.png",
+      alt: "NVIDIA GTC Conference",
+      caption: "Attending NVIDIA GTC Conference"
+    },
   ];
 
   const openModal = (index: number) => {
