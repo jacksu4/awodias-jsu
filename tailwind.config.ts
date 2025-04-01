@@ -120,13 +120,48 @@ export default {
 						transform: 'translateX(0)',
 						opacity: '1'
 					}
+				},
+				// New animations for Hero component
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0) translateX(0)'
+					},
+					'50%': {
+						transform: 'translateY(-20px) translateX(10px)'
+					}
+				},
+				'wave': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'particle': {
+					'0%': {
+						transform: 'translateY(0) translateX(0)',
+						opacity: '0.3'
+					},
+					'50%': {
+						transform: 'translateY(-20px) translateX(10px)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(0) translateX(0)',
+						opacity: '0.3'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in': 'slide-in 0.6s ease-out'
+				'slide-in': 'slide-in 0.6s ease-out',
+				// New animations for Hero component
+				'float': 'float 6s ease-in-out infinite',
+				'wave': 'wave 3s ease-in-out infinite',
+				'particle': 'particle 7s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
