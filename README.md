@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Jingcheng Su's Personal Website
 
 ## Project info
 
@@ -24,10 +24,10 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/jacksu4/awodias-jsu.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd awodias-jsu
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -66,7 +66,7 @@ Simply open [Lovable](https://lovable.dev/projects/97be3f4f-ebdf-4794-a5b8-b2d3a
 
 ## Can I connect a custom domain to my Lovable project?
 
-Yes it is!
+Yes!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
