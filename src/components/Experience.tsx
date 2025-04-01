@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { FaBriefcase, FaGraduationCap, FaCode } from "react-icons/fa";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -122,30 +121,25 @@ const Experience = () => {
           
           <TabsContent value="work" className="mt-6 space-y-12">
             {workExperience.map((job, index) => (
-              <div key={index} className="relative pl-8 md:pl-0">
-                <div className="md:flex md:items-start">
-                  <div className="md:w-1/2 md:pr-12 relative">
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
-                        {job.period}
-                      </span>
-                      <h3 className="text-xl font-heading font-semibold text-gray-900 mb-1">
-                        {job.role}
-                      </h3>
-                      <p className="text-gray-700 mb-4">
-                        {job.company} · {job.location}
-                      </p>
-                      <ul className="space-y-2 text-gray-600">
-                        {job.achievements.map((achievement, i) => (
-                          <li key={i} className="flex">
-                            <span className="mr-2">•</span>
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="md:w-1/2"></div>
+              <div key={index} className="relative">
+                <div className="bg-white p-6 rounded-lg shadow-md w-full">
+                  <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
+                    {job.period}
+                  </span>
+                  <h3 className="text-xl font-heading font-semibold text-gray-900 mb-1">
+                    {job.role}
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    {job.company} · {job.location}
+                  </p>
+                  <ul className="space-y-2 text-gray-600">
+                    {job.achievements.map((achievement, i) => (
+                      <li key={i} className="flex">
+                        <span className="mr-2">•</span>
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -153,25 +147,20 @@ const Experience = () => {
           
           <TabsContent value="education" className="mt-6 space-y-12">
             {educationExperience.map((edu, index) => (
-              <div key={index} className="relative pl-8 md:pl-0">
-                <div className="md:flex md:items-start">
-                  <div className="md:w-1/2 md:pr-12 relative">
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
-                        {edu.period}
-                      </span>
-                      <h3 className="text-xl font-heading font-semibold text-gray-900 mb-1">
-                        {edu.degree}
-                      </h3>
-                      <p className="text-gray-700 mb-4">
-                        {edu.institution} · {edu.location}
-                      </p>
-                      <p className="text-gray-600">
-                        {edu.details}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="md:w-1/2"></div>
+              <div key={index} className="relative">
+                <div className="bg-white p-6 rounded-lg shadow-md w-full">
+                  <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
+                    {edu.period}
+                  </span>
+                  <h3 className="text-xl font-heading font-semibold text-gray-900 mb-1">
+                    {edu.degree}
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    {edu.institution} · {edu.location}
+                  </p>
+                  <p className="text-gray-600">
+                    {edu.details}
+                  </p>
                 </div>
               </div>
             ))}
@@ -179,33 +168,28 @@ const Experience = () => {
           
           <TabsContent value="projects" className="mt-6 space-y-12">
             {projects.map((project, index) => (
-              <div key={index} className="relative pl-8 md:pl-0">
-                <div className="md:flex md:items-start">
-                  <div className="md:w-1/2 md:pr-12 relative">
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
-                        {project.period}
-                      </span>
-                      <h3 className="text-xl font-heading font-semibold text-gray-900 mb-1">
-                        {project.name}
-                      </h3>
-                      <p className="text-gray-700 mb-4">
-                        Technologies: {project.technologies}
-                      </p>
-                      <p className="text-gray-600 mb-4">
-                        {project.description}
-                      </p>
-                      <ul className="space-y-2 text-gray-600">
-                        {project.achievements.map((achievement, i) => (
-                          <li key={i} className="flex">
-                            <span className="mr-2">•</span>
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="md:w-1/2"></div>
+              <div key={index} className="relative">
+                <div className="bg-white p-6 rounded-lg shadow-md w-full">
+                  <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
+                    {project.period}
+                  </span>
+                  <h3 className="text-xl font-heading font-semibold text-gray-900 mb-1">
+                    {project.name}
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    Technologies: {project.technologies}
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    {project.description}
+                  </p>
+                  <ul className="space-y-2 text-gray-600">
+                    {project.achievements.map((achievement, i) => (
+                      <li key={i} className="flex">
+                        <span className="mr-2">•</span>
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
