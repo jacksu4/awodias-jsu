@@ -101,7 +101,7 @@ const Gallery = () => {
         </div>
         
         {currentImage !== null && (
-          <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-black/90 flex flex-col items-center justify-center p-4">
             <button 
               onClick={closeModal}
               className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
@@ -110,31 +110,35 @@ const Gallery = () => {
               <X size={32} />
             </button>
             
-            <button 
-              onClick={prevImage}
-              className="absolute left-4 text-white hover:text-gray-300 z-10"
-              aria-label="Previous image"
-            >
-              <ArrowLeft size={32} />
-            </button>
+            <div className="relative w-full max-w-4xl flex justify-center items-center">
+              <button 
+                onClick={prevImage}
+                className="absolute left-0 text-white hover:text-gray-300 z-10"
+                aria-label="Previous image"
+              >
+                <ArrowLeft size={32} />
+              </button>
+              
+              <img 
+                src={images[currentImage].src} 
+                alt={images[currentImage].alt}
+                className="max-h-[80vh] max-w-[90vw] object-contain"
+              />
+              
+              <button 
+                onClick={nextImage}
+                className="absolute right-0 text-white hover:text-gray-300 z-10"
+                aria-label="Next image"
+              >
+                <ArrowRight size={32} />
+              </button>
+            </div>
             
-            <img 
-              src={images[currentImage].src} 
-              alt={images[currentImage].alt}
-              className="max-h-[90vh] max-w-[90vw] object-contain"
-            />
-            
-            <button 
-              onClick={nextImage}
-              className="absolute right-4 text-white hover:text-gray-300 z-10"
-              aria-label="Next image"
-            >
-              <ArrowRight size={32} />
-            </button>
-            
-            <p className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white text-lg">
-              {images[currentImage].caption}
-            </p>
+            <div className="w-full text-center mt-4">
+              <p className="text-white text-lg font-medium">
+                {images[currentImage].caption}
+              </p>
+            </div>
           </div>
         )}
       </div>
