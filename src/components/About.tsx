@@ -6,7 +6,8 @@ import {
   FaCampground, 
   FaPlane, 
   FaGamepad, 
-  FaCode 
+  FaCode,
+  FaDumbbell
 } from "react-icons/fa";
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
     { name: "Traveling", icon: FaPlane },
     { name: "Gaming", icon: FaGamepad },
     { name: "Coding", icon: FaCode },
+    { name: "Fitness", icon: FaDumbbell },
   ];
 
   return (
