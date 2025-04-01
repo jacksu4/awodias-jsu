@@ -17,7 +17,7 @@ const Gallery = () => {
       caption: "Hiking in Hong Kong"
     },
     {
-      src: "/lovable-uploads/10d3c6fe-3b9f-40fd-8f29-ef9121bceb59.png",
+      src: "/lovable-uploads/6bb35d1c-a030-4ff6-8413-1e3d0aca21de.png",
       alt: "Snowboarding",
       caption: "Winter adventures"
     },
