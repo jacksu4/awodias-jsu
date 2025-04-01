@@ -115,7 +115,8 @@ const Contact = () => {
                 Moving Soon To
               </h3>
               <p className="text-white/80">
-                Hong Kong
+                Hong Kong<br />
+                <span className="text-sm italic">(HKU MBA Student & CFA L2 Candidate)</span>
               </p>
             </div>
           </div>

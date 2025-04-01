@@ -38,6 +38,9 @@ const About = () => {
               Currently, I work as a Software Engineer at BILL (NYSE: BILL), where I've been developing innovative solutions for the financial technology industry. I'm also preparing for an exciting transition as an incoming investor planning to relocate to Hong Kong soon.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
+              While establishing my investment company in Hong Kong, I'll be attending the HKU MBA program part-time to enhance my communication, business, and finance skills. Additionally, I'm currently preparing for the CFA Level 2 exam taking place this May.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
               I thrive on challenges and constantly push myself to grow both professionally and personally. Meeting new people and building meaningful connections is something I deeply value.
             </p>
           </div>
@@ -53,7 +56,7 @@ const About = () => {
               </li>
               <li className="flex items-start">
                 <span className="font-medium text-gray-900 mr-2">Education:</span>
-                <span className="text-gray-700">BS in Computer Science (UC Irvine)<br />MS in Computer Science (Rice University)</span>
+                <span className="text-gray-700">BS in Computer Science (UC Irvine)<br />MS in Computer Science (Rice University)<br />MBA (HKU, part-time, upcoming)</span>
               </li>
               <li className="flex items-start">
                 <span className="font-medium text-gray-900 mr-2">Current Role:</span>
@@ -62,6 +65,10 @@ const About = () => {
               <li className="flex items-start">
                 <span className="font-medium text-gray-900 mr-2">Next Chapter:</span>
                 <span className="text-gray-700">From Engineer to Investor in Hong Kong</span>
+              </li>
+              <li className="flex items-start">
+                <span className="font-medium text-gray-900 mr-2">Professional Development:</span>
+                <span className="text-gray-700">CFA Level 2 Candidate (Exam: May 2024)</span>
               </li>
             </ul>
             
