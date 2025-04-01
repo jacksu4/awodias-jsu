@@ -7,9 +7,9 @@ const Gallery = () => {
   
   const images = [
     {
-      src: "/lovable-uploads/a589ec88-957a-40d4-a51a-c5563d048010.png", 
-      alt: "MacLehose Trail",
-      caption: "Hiking in MacLehose Trail, Hong Kong"
+      src: "/lovable-uploads/2403784e-c75b-4ac4-8454-06bda4caeaf0.png",
+      alt: "NVIDIA GTC Conference",
+      caption: "Attending NVIDIA GTC Conference"
     },
     {
       src: "/lovable-uploads/6bb35d1c-a030-4ff6-8413-1e3d0aca21de.png",
@@ -27,9 +27,9 @@ const Gallery = () => {
       caption: "Emirates Stadium tour in London"
     },
     {
-      src: "/lovable-uploads/2403784e-c75b-4ac4-8454-06bda4caeaf0.png",
-      alt: "NVIDIA GTC Conference",
-      caption: "Attending NVIDIA GTC Conference"
+      src: "/lovable-uploads/a589ec88-957a-40d4-a51a-c5563d048010.png", 
+      alt: "MacLehose Trail",
+      caption: "Hiking in MacLehose Trail, Hong Kong"
     },
     {
       src: "/lovable-uploads/9d2f86b3-8449-4d58-9bbb-4ad0eb906c5e.png",
