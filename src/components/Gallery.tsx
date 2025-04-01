@@ -7,9 +7,9 @@ const Gallery = () => {
   
   const images = [
     {
-      src: "/lovable-uploads/9552f5d7-825b-44c9-b58c-ac49ffc6dacd.png",
-      alt: "Mount Rainier",
-      caption: "Hiking in Mount Rainier"
+      src: "/lovable-uploads/8829cfcf-957c-4455-ba10-60e76e08331d.png",
+      alt: "BILL Team",
+      caption: "Team event at BILL"
     },
     {
       src: "/lovable-uploads/a589ec88-957a-40d4-a51a-c5563d048010.png", 
