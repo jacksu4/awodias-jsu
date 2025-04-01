@@ -7,29 +7,24 @@ const Gallery = () => {
   
   const images = [
     {
-      src: "/lovable-uploads/8829cfcf-957c-4455-ba10-60e76e08331d.png",
-      alt: "BILL Team",
-      caption: "Team event at BILL"
-    },
-    {
       src: "/lovable-uploads/a589ec88-957a-40d4-a51a-c5563d048010.png", 
-      alt: "MacleaMacLehose Trail",
-      caption: "Hiking in Hong Kong"
+      alt: "MacLehose Trail",
+      caption: "Hiking in MacLehose Trail, Hong Kong"
     },
     {
       src: "/lovable-uploads/6bb35d1c-a030-4ff6-8413-1e3d0aca21de.png",
       alt: "Snowboarding",
-      caption: "Winter adventures"
+      caption: "Snowboarding in Palisades, Tahoe"
     },
     {
       src: "/lovable-uploads/5c5f41fa-7689-4015-9679-b4caba5b9047.png",
       alt: "Autumn forest path",
-      caption: "Exploring autumn nature trails"
+      caption: "Exploring autumn nature trails in North Michigan"
     },
     {
       src: "/lovable-uploads/b32b58b1-af99-4dd2-9b70-ed6c0b266e3a.png",
       alt: "London",
-      caption: "Travel to London"
+      caption: "Travelling to London"
     },
     {
       src: "/lovable-uploads/2403784e-c75b-4ac4-8454-06bda4caeaf0.png",
@@ -39,12 +34,17 @@ const Gallery = () => {
     {
       src: "/lovable-uploads/9d2f86b3-8449-4d58-9bbb-4ad0eb906c5e.png",
       alt: "Google",
-      caption: "Google events with college friend"
+      caption: "Attending Google Cloud event"
     },
     {
       src: "/lovable-uploads/8d93f4e6-5de5-4edf-98b3-0d4fa9776a26.png",
       alt: "Basketball",
       caption: "Balling with teammates"
+    },
+    {
+      src: "/lovable-uploads/8829cfcf-957c-4455-ba10-60e76e08331d.png",
+      alt: "BILL Team",
+      caption: "Team event at BILL"
     },
   ];
 
