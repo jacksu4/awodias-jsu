@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Resume = () => {
   const [showResume, setShowResume] = useState(false);
-  const resumeUrl = "/lovable-uploads/8d93f4e6-5de5-4edf-98b3-0d4fa9776a26.png";
+  const resumeUrl = "/lovable-uploads/e601f0c9-9fa4-4c3f-86fb-a273c36d3ae6.png";
 
   return (
     <section id="resume" className="py-20 bg-gray-50">

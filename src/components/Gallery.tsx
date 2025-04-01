@@ -7,40 +7,40 @@ const Gallery = () => {
   
   const images = [
     {
-      src: "/lovable-uploads/e601f0c9-9fa4-4c3f-86fb-a273c36d3ae6.png",
-      alt: "Mountain hiking",
-      caption: "Exploring mountain trails"
-    },
-    {
       src: "/lovable-uploads/9552f5d7-825b-44c9-b58c-ac49ffc6dacd.png",
-      alt: "Seaside rocks",
-      caption: "Adventure by the sea"
+      alt: "Mount Rainier",
+      caption: "Hiking in Mount Rainier"
     },
     {
       src: "/lovable-uploads/a589ec88-957a-40d4-a51a-c5563d048010.png", 
+      alt: "MacleaMacLehose Trail",
+      caption: "Hiking in Hong Kong"
+    },
+    {
+      src: "/lovable-uploads/10d3c6fe-3b9f-40fd-8f29-ef9121bceb59.png",
       alt: "Snowboarding",
       caption: "Winter adventures"
     },
     {
-      src: "/lovable-uploads/10d3c6fe-3b9f-40fd-8f29-ef9121bceb59.png",
+      src: "/lovable-uploads/5c5f41fa-7689-4015-9679-b4caba5b9047.png",
       alt: "Autumn forest path",
       caption: "Exploring nature trails"
     },
     {
-      src: "/lovable-uploads/5c5f41fa-7689-4015-9679-b4caba5b9047.png",
-      alt: "Night city view",
-      caption: "City lights exploration"
-    },
-    {
       src: "/lovable-uploads/b32b58b1-af99-4dd2-9b70-ed6c0b266e3a.png",
-      alt: "Google campus",
-      caption: "Tech adventures"
+      alt: "London",
+      caption: "Travel to London"
     },
     {
       src: "/lovable-uploads/9d2f86b3-8449-4d58-9bbb-4ad0eb906c5e.png",
-      alt: "Basketball team",
-      caption: "Basketball champions"
-    }
+      alt: "Google",
+      caption: "Google events with college friend"
+    },
+    {
+      src: "/lovable-uploads/8d93f4e6-5de5-4edf-98b3-0d4fa9776a26.png",
+      alt: "Basketball",
+      caption: "Balling with teammates"
+    },
   ];
 
   const openModal = (index: number) => {
