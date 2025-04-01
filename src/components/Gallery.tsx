@@ -19,12 +19,12 @@ const Gallery = () => {
     {
       src: "/lovable-uploads/5c5f41fa-7689-4015-9679-b4caba5b9047.png",
       alt: "Autumn forest path",
-      caption: "Exploring autumn nature trails in North Michigan"
+      caption: "Exploring autumn in North Michigan"
     },
     {
       src: "/lovable-uploads/d28c42fc-3696-4758-8e4a-fd9eac50dfa0.png",
       alt: "Emirates Stadium",
-      caption: "Emirates Stadium tour in London"
+      caption: "Visiting Emirates Stadium, London"
     },
     {
       src: "/lovable-uploads/a589ec88-957a-40d4-a51a-c5563d048010.png", 
@@ -44,7 +44,7 @@ const Gallery = () => {
     {
       src: "/lovable-uploads/8829cfcf-957c-4455-ba10-60e76e08331d.png",
       alt: "BILL Team",
-      caption: "Team event at BILL"
+      caption: "Celebrating wins with the team at BILL"
     },
   ];
 
