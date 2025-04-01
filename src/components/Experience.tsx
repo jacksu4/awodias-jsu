@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { FaBriefcase, FaGraduationCap, FaCode } from "react-icons/fa";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -103,20 +102,22 @@ const Experience = () => {
         </div>
         
         <Tabs defaultValue="work" className="max-w-4xl mx-auto">
-          <TabsList className="w-full grid grid-cols-3 mb-12">
-            <TabsTrigger value="work" className="text-lg py-3">
-              <FaBriefcase className="mr-2 h-5 w-5" />
-              Work
-            </TabsTrigger>
-            <TabsTrigger value="education" className="text-lg py-3">
-              <FaGraduationCap className="mr-2 h-5 w-5" />
-              Education
-            </TabsTrigger>
-            <TabsTrigger value="projects" className="text-lg py-3">
-              <FaCode className="mr-2 h-5 w-5" />
-              Projects
-            </TabsTrigger>
-          </TabsList>
+          <div className="overflow-hidden rounded-md mb-10">
+            <TabsList className="grid grid-cols-3 bg-gray-100">
+              <TabsTrigger value="work" className="text-lg py-3 data-[state=active]:bg-white">
+                <FaBriefcase className="mr-2 h-5 w-5" />
+                Work
+              </TabsTrigger>
+              <TabsTrigger value="education" className="text-lg py-3 data-[state=active]:bg-white">
+                <FaGraduationCap className="mr-2 h-5 w-5" />
+                Education
+              </TabsTrigger>
+              <TabsTrigger value="projects" className="text-lg py-3 data-[state=active]:bg-white">
+                <FaCode className="mr-2 h-5 w-5" />
+                Projects
+              </TabsTrigger>
+            </TabsList>
+          </div>
           
           <TabsContent value="work" className="mt-6 space-y-12">
             {workExperience.map((job, index) => (
