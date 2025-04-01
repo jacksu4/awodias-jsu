@@ -24,12 +24,17 @@ const Gallery = () => {
     {
       src: "/lovable-uploads/5c5f41fa-7689-4015-9679-b4caba5b9047.png",
       alt: "Autumn forest path",
-      caption: "Exploring nature trails"
+      caption: "Exploring autumn nature trails"
     },
     {
       src: "/lovable-uploads/b32b58b1-af99-4dd2-9b70-ed6c0b266e3a.png",
       alt: "London",
       caption: "Travel to London"
+    },
+    {
+      src: "/lovable-uploads/2403784e-c75b-4ac4-8454-06bda4caeaf0.png",
+      alt: "NVIDIA GTC Conference",
+      caption: "Attending NVIDIA GTC Conference"
     },
     {
       src: "/lovable-uploads/9d2f86b3-8449-4d58-9bbb-4ad0eb906c5e.png",
@@ -40,11 +45,6 @@ const Gallery = () => {
       src: "/lovable-uploads/8d93f4e6-5de5-4edf-98b3-0d4fa9776a26.png",
       alt: "Basketball",
       caption: "Balling with teammates"
-    },
-    {
-      src: "/lovable-uploads/2403784e-c75b-4ac4-8454-06bda4caeaf0.png",
-      alt: "NVIDIA GTC Conference",
-      caption: "Attending NVIDIA GTC Conference"
     },
   ];
 
