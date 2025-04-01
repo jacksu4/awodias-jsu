@@ -6,7 +6,7 @@ Welcome to the source code of my personal website, [awodias.org](https://awodias
 
 ## 🌐 Project Info
 
-- **Website**: [awodias.org](https://awodias.org)  
+- **Website**: [awodias.org](https://awodias.org) / [awodias-jsu.lovable.app](https://awodias-jsu.lovable.app/)
 - **Domain Provider**: Cloudflare  
 - **Built With**:  
   - Vite  
