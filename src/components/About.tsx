@@ -9,6 +9,8 @@ import {
   FaCode,
   FaDumbbell
 } from "react-icons/fa";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   const interests = [
@@ -31,25 +33,47 @@ const About = () => {
           <div className="w-20 h-1 bg-mountain-blue mx-auto"></div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-          {/* Profile Image - New addition */}
-          <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative">
-              <div className="w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Profile Card */}
+          <div className="lg:col-span-4 lg:order-1">
+            <Card className="overflow-hidden border-none shadow-lg">
+              <div className="relative">
                 <img 
                   src="/lovable-uploads/25be2e1e-5bb0-4369-a7bd-c6bdd1cf0ba8.png" 
                   alt="Profile photo at Alcatraz Island" 
-                  className="w-full h-auto"
+                  className="w-full h-auto object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <p className="text-sm font-medium">Visiting Alcatraz Island in San Francisco Bay</p>
+                </div>
               </div>
-              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md">
-                <p className="text-sm font-medium text-gray-800">Visiting Alcatraz Island in San Francisco Bay</p>
-              </div>
-            </div>
+              
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-4 h-4 rounded-full bg-mountain-blue"></div>
+                    <h3 className="font-heading font-semibold">Software Engineer at BILL</h3>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-4 h-4 rounded-full bg-forest-green"></div>
+                    <h3 className="font-heading font-semibold">From Shenzhen, China</h3>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-4 h-4 rounded-full bg-mountain-light"></div>
+                    <h3 className="font-heading font-semibold">Based in Bay Area, California</h3>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-4 h-4 rounded-full bg-forest-yellow"></div>
+                    <h3 className="font-heading font-semibold">Future: Hong Kong</h3>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
           
           {/* Bio Information */}
-          <div className="space-y-6 order-2 lg:order-1 lg:col-span-1">
+          <div className="space-y-6 lg:col-span-4 lg:order-2">
             <p className="text-lg text-gray-700 leading-relaxed">
               I'm a 25-year-old Software Engineer originally from Shenzhen, China, and currently based in Bay Area, California. I moved to the United States for my education, completing my undergraduate degree at UC Irvine and Master's at Rice University, both in Computer Science.
             </p>
@@ -62,43 +86,51 @@ const About = () => {
           </div>
           
           {/* Quick Facts and Interests */}
-          <div className="bg-gray-50 rounded-lg p-8 shadow-md order-3 lg:order-3">
-            <h3 className="text-xl font-heading font-semibold text-gray-900 mb-6">
-              Quick Facts
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="font-medium text-gray-900 mr-2">Born:</span>
-                <span className="text-gray-700">Shenzhen, China</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-medium text-gray-900 mr-2">Education:</span>
-                <span className="text-gray-700">BS in Computer Science (UC Irvine)<br />MS in Computer Science (Rice University)<br />MBA (HKU, part-time, upcoming)</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-medium text-gray-900 mr-2">Current Role:</span>
-                <span className="text-gray-700">Software Engineer at BILL</span>
-              </li>
-              <li className="flex items-start">
-                <span className="font-medium text-gray-900 mr-2">Next Chapter:</span>
-                <span className="text-gray-700">From Engineer to Investor in Hong Kong</span>
-              </li>
-            </ul>
-            
-            <h3 className="text-xl font-heading font-semibold text-gray-900 mt-8 mb-6">
-              Interests
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {interests.map((interest) => (
-                <div 
-                  key={interest.name} 
-                  className="flex items-center px-4 py-2 bg-white rounded-full shadow-sm text-gray-700"
-                >
-                  <interest.icon size={16} className="mr-2 text-mountain-blue" />
-                  <span>{interest.name}</span>
-                </div>
-              ))}
-            </div>
+          <div className="lg:col-span-4 lg:order-3">
+            <Card className="shadow-md p-6 h-full">
+              <h3 className="text-xl font-heading font-semibold text-gray-900 mb-6 flex items-center">
+                <span className="w-2 h-8 bg-mountain-blue mr-3 rounded-full"></span>
+                Quick Facts
+              </h3>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start">
+                  <span className="font-medium text-gray-900 min-w-24">Born:</span>
+                  <span className="text-gray-700">Shenzhen, China</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-medium text-gray-900 min-w-24">Education:</span>
+                  <div className="text-gray-700">
+                    <div>BS in Computer Science (UC Irvine)</div>
+                    <div>MS in Computer Science (Rice University)</div>
+                    <div>MBA (HKU, part-time, upcoming)</div>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-medium text-gray-900 min-w-24">Current Role:</span>
+                  <span className="text-gray-700">Software Engineer at BILL</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-medium text-gray-900 min-w-24">Next Chapter:</span>
+                  <span className="text-gray-700">From Engineer to Investor in Hong Kong</span>
+                </li>
+              </ul>
+              
+              <h3 className="text-xl font-heading font-semibold text-gray-900 mb-6 flex items-center">
+                <span className="w-2 h-8 bg-forest-green mr-3 rounded-full"></span>
+                Interests
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {interests.map((interest) => (
+                  <div 
+                    key={interest.name} 
+                    className="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-gray-100 text-gray-700 hover:bg-gray-50 transition-colors"
+                  >
+                    <interest.icon size={16} className="mr-2 text-mountain-blue" />
+                    <span>{interest.name}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
           </div>
         </div>
       </div>
