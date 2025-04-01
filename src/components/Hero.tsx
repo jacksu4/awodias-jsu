@@ -53,7 +53,7 @@ const Hero = () => {
           Software Engineer, Investor & Life-long Learner
         </h2>
         <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: "400ms" }}>
-          From Shenzhen to Silicon Valley, bringing technical expertise and business vision together
+          From Shenzhen to Silicon Valley, and now to Hong Kong — bringing together technical expertise and business vision.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "600ms" }}>
           <Button asChild size="lg" className="bg-white/90 text-mountain-dark hover:bg-white backdrop-blur-sm border border-white/20 transform transition-transform hover:scale-105">
