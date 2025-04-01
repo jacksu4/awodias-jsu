@@ -107,7 +107,7 @@ const Contact = () => {
                 Current Location
               </h3>
               <p className="text-white/80">
-                San Jose, California<br />
+                Sunnyvale, California<br />
                 United States
               </p>
               
