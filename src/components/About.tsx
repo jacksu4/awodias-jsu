@@ -14,7 +14,6 @@ const About = () => {
     { name: "Basketball", icon: FaBasketballBall },
     { name: "Table Tennis", icon: FaTableTennis },
     { name: "Hiking", icon: FaMountain },
-    { name: "Camping", icon: FaCampground },
     { name: "Traveling", icon: FaPlane },
     { name: "Gaming", icon: FaGamepad },
     { name: "Coding", icon: FaCode },
