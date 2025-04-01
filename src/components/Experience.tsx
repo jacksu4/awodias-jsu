@@ -123,10 +123,8 @@ const Experience = () => {
           <TabsContent value="work" className="mt-6 space-y-12">
             {workExperience.map((job, index) => (
               <div key={index} className="relative pl-8 md:pl-0">
-                {/* Remove blue dot with vertical line */}
-                
-                <div className={`md:flex md:items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse md:text-right'}`}>
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} relative`}>
+                <div className="md:flex md:items-start">
+                  <div className="md:w-1/2 md:pr-12 relative">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
                         {job.period}
@@ -156,10 +154,8 @@ const Experience = () => {
           <TabsContent value="education" className="mt-6 space-y-12">
             {educationExperience.map((edu, index) => (
               <div key={index} className="relative pl-8 md:pl-0">
-                {/* Remove blue dot with vertical line */}
-                
-                <div className={`md:flex md:items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse md:text-right'}`}>
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} relative`}>
+                <div className="md:flex md:items-start">
+                  <div className="md:w-1/2 md:pr-12 relative">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
                         {edu.period}
@@ -184,10 +180,8 @@ const Experience = () => {
           <TabsContent value="projects" className="mt-6 space-y-12">
             {projects.map((project, index) => (
               <div key={index} className="relative pl-8 md:pl-0">
-                {/* Remove blue dot with vertical line */}
-                
-                <div className={`md:flex md:items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse md:text-right'}`}>
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} relative`}>
+                <div className="md:flex md:items-start">
+                  <div className="md:w-1/2 md:pr-12 relative">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
                         {project.period}
