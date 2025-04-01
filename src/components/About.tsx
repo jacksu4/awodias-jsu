@@ -9,6 +9,7 @@ import {
   FaDumbbell
 } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
+import { Building } from "lucide-react";
 
 const About = () => {
   const interests = [
@@ -40,8 +41,10 @@ const About = () => {
                 alt="Profile photo at Alcatraz Island" 
                 className="w-full h-auto object-cover"
               />
-              <div className="bg-white py-2 px-4 text-center text-gray-700">
-                <p className="italic">Visiting Alcatraz Island</p>
+              <div className="flex items-center justify-center bg-white py-4 px-4">
+                <span className="font-heading text-gray-800 tracking-wide text-base flex items-center">
+                  Visiting Alcatraz Island 🏛
+                </span>
               </div>
             </div>
           </Card>
