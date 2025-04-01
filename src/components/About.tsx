@@ -1,15 +1,23 @@
 
-import { Basketball, Table as TableTennisIcon, Mountain, Tent, Plane, Gamepad, Code } from "lucide-react";
+import { 
+  FaBasketballBall, 
+  FaTableTennis, 
+  FaMountain, 
+  FaCampground, 
+  FaPlane, 
+  FaGamepad, 
+  FaCode 
+} from "react-icons/fa";
 
 const About = () => {
   const interests = [
-    { name: "Basketball", icon: Basketball },
-    { name: "Table Tennis", icon: TableTennisIcon },
-    { name: "Hiking", icon: Mountain },
-    { name: "Camping", icon: Tent },
-    { name: "Traveling", icon: Plane },
-    { name: "Gaming", icon: Gamepad },
-    { name: "Coding", icon: Code },
+    { name: "Basketball", icon: FaBasketballBall },
+    { name: "Table Tennis", icon: FaTableTennis },
+    { name: "Hiking", icon: FaMountain },
+    { name: "Camping", icon: FaCampground },
+    { name: "Traveling", icon: FaPlane },
+    { name: "Gaming", icon: FaGamepad },
+    { name: "Coding", icon: FaCode },
   ];
 
   return (

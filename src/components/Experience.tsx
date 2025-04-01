@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Briefcase, GraduationCap, Code } from "lucide-react";
+import { FaBriefcase, FaGraduationCap, FaCode } from "react-icons/fa";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Experience = () => {
@@ -105,15 +105,15 @@ const Experience = () => {
         <Tabs defaultValue="work" className="max-w-4xl mx-auto">
           <TabsList className="w-full grid grid-cols-3 mb-12">
             <TabsTrigger value="work" className="text-lg py-3">
-              <Briefcase className="mr-2 h-5 w-5" />
+              <FaBriefcase className="mr-2 h-5 w-5" />
               Work
             </TabsTrigger>
             <TabsTrigger value="education" className="text-lg py-3">
-              <GraduationCap className="mr-2 h-5 w-5" />
+              <FaGraduationCap className="mr-2 h-5 w-5" />
               Education
             </TabsTrigger>
             <TabsTrigger value="projects" className="text-lg py-3">
-              <Code className="mr-2 h-5 w-5" />
+              <FaCode className="mr-2 h-5 w-5" />
               Projects
             </TabsTrigger>
           </TabsList>

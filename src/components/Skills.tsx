@@ -1,30 +1,30 @@
 
 import { 
-  Code, 
-  Database, 
-  ServerCog, 
-  LineChart, 
-  Languages, 
-  Users, 
-  BrainCircuit
-} from "lucide-react";
+  FaCode,
+  FaDatabase,
+  FaServer,
+  FaChartLine,
+  FaLanguage, 
+  FaUsers,
+  FaBrain
+} from "react-icons/fa";
 
 const Skills = () => {
   const technicalSkills = [
     {
       category: "Programming Languages",
       skills: ["Python", "Java", "C++", "SQL", "JavaScript", "TypeScript", "HTML/CSS"],
-      icon: Code
+      icon: FaCode
     },
     {
       category: "Databases",
       skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
-      icon: Database
+      icon: FaDatabase
     },
     {
       category: "Technologies & Frameworks",
       skills: ["React", "REST APIs", "Microservices", "Spring Boot", "Node.js", "AWS"],
-      icon: ServerCog
+      icon: FaServer
     }
   ];
 
@@ -32,22 +32,22 @@ const Skills = () => {
     {
       skill: "Analytical Thinking",
       description: "Analyzing complex problems and developing effective solutions",
-      icon: BrainCircuit
+      icon: FaBrain
     },
     {
       skill: "Public Speaking",
       description: "Presenting ideas clearly and confidently to various audiences",
-      icon: Languages
+      icon: FaLanguage
     },
     {
       skill: "Effective Collaboration",
       description: "Working seamlessly with cross-functional teams",
-      icon: Users
+      icon: FaUsers
     },
     {
       skill: "Proactive Leadership",
       description: "Taking initiative and guiding teams toward success",
-      icon: LineChart
+      icon: FaChartLine
     }
   ];
 

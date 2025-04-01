@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,14 +21,14 @@ const Footer = () => {
               className="text-gray-400 hover:text-white transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={24} />
+              <FaLinkedin size={24} />
             </a>
             <a 
               href="mailto:sujingcheng1105@gmail.com" 
               className="text-gray-400 hover:text-white transition-colors"
               aria-label="Email"
             >
-              <Mail size={24} />
+              <FaEnvelope size={24} />
             </a>
           </div>
         </div>
