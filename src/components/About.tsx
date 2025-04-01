@@ -1,15 +1,15 @@
 
-import { Basketball, TableTennis, Mountain, Tent, Plane, Gamepad2, Code } from "lucide-react";
+import { Basketball as BasketballIcon, PingPong, Mountain, Tent, Plane, Gamepad, Code as CodeIcon } from "lucide-react";
 
 const About = () => {
   const interests = [
-    { name: "Basketball", icon: Basketball },
-    { name: "Table Tennis", icon: TableTennis },
+    { name: "Basketball", icon: BasketballIcon },
+    { name: "Table Tennis", icon: PingPong },
     { name: "Hiking", icon: Mountain },
     { name: "Camping", icon: Tent },
     { name: "Traveling", icon: Plane },
-    { name: "Gaming", icon: Gamepad2 },
-    { name: "Coding", icon: Code },
+    { name: "Gaming", icon: Gamepad },
+    { name: "Coding", icon: CodeIcon },
   ];
 
   return (

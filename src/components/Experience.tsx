@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap, Code } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Experience = () => {
