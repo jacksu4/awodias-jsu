@@ -66,10 +66,6 @@ const About = () => {
                 <span className="font-medium text-gray-900 mr-2">Next Chapter:</span>
                 <span className="text-gray-700">From Engineer to Investor in Hong Kong</span>
               </li>
-              <li className="flex items-start">
-                <span className="font-medium text-gray-900 mr-2">Professional Development:</span>
-                <span className="text-gray-700">CFA Level 2 Candidate (Exam: May 2024)</span>
-              </li>
             </ul>
             
             <h3 className="text-xl font-heading font-semibold text-gray-900 mt-8 mb-6">
