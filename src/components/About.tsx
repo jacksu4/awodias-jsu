@@ -52,7 +52,7 @@ const About = () => {
               I'm a 25-year-old Software Engineer from Shenzhen, China, now living in the Bay Area. I earned my Computer Science degrees from UC Irvine (BS) and Rice University (MS). With a strong foundation in both academic knowledge and practical experience, I've been focusing on developing innovative solutions that bridge technology and business needs.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Currently working at BILL (NYSE: BILL) in fintech, I'm preparing to transition into investment and relocate to Hong Kong. This career shift allows me to combine my technical expertise with my passion for finance and business strategy. I'm excited about this new chapter that will leverage both my engineering background and investment interests.
+              Currently working at BILL (NYSE: BILL) in fintech industry, I'm preparing to transition into investment and relocate to Hong Kong. This career shift allows me to combine my technical expertise with my passion for finance and business strategy. I'm excited about this new chapter that will leverage both my engineering background and investment interests.
             </p>
           </div>
         </div>
