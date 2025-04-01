@@ -31,8 +31,25 @@ const About = () => {
           <div className="w-20 h-1 bg-mountain-blue mx-auto"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          {/* Profile Image - New addition */}
+          <div className="order-1 lg:order-2 flex justify-center">
+            <div className="relative">
+              <div className="w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
+                <img 
+                  src="/lovable-uploads/25be2e1e-5bb0-4369-a7bd-c6bdd1cf0ba8.png" 
+                  alt="Profile photo at Alcatraz Island" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <p className="text-sm font-medium text-gray-800">Visiting Alcatraz Island in San Francisco Bay</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Bio Information */}
+          <div className="space-y-6 order-2 lg:order-1 lg:col-span-1">
             <p className="text-lg text-gray-700 leading-relaxed">
               I'm a 25-year-old Software Engineer originally from Shenzhen, China, and currently based in Bay Area, California. I moved to the United States for my education, completing my undergraduate degree at UC Irvine and Master's at Rice University, both in Computer Science.
             </p>
@@ -42,12 +59,10 @@ const About = () => {
             <p className="text-lg text-gray-700 leading-relaxed">
               While establishing my investment company in Hong Kong, I'll be attending the HKU MBA program part-time to enhance my communication, business, and finance skills. Additionally, I'm currently preparing for the CFA Level 2 exam taking place this May.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              I thrive on challenges and constantly push myself to grow both professionally and personally. Meeting new people and building meaningful connections is something I deeply value.
-            </p>
           </div>
           
-          <div className="bg-gray-50 rounded-lg p-8 shadow-md">
+          {/* Quick Facts and Interests */}
+          <div className="bg-gray-50 rounded-lg p-8 shadow-md order-3 lg:order-3">
             <h3 className="text-xl font-heading font-semibold text-gray-900 mb-6">
               Quick Facts
             </h3>
