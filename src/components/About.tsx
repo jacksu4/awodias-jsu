@@ -50,7 +50,7 @@ const About = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <span className="font-medium text-gray-900 mr-2">Born:</span>
-                <span className="text-gray-700">November 5, 1999 (Shenzhen, China)</span>
+                <span className="text-gray-700">Shenzhen, China</span>
               </li>
               <li className="flex items-start">
                 <span className="font-medium text-gray-900 mr-2">Education:</span>

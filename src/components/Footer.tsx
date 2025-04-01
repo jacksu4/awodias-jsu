@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h3 className="text-2xl font-heading font-bold">Jingcheng Su</h3>
-            <p className="text-gray-400 mt-2">Software Engineer & Investor</p>
+            <p className="text-gray-400 mt-2">Software Engineer, Investor & Life-long Learner</p>
           </div>
           
           <div className="flex gap-6">
@@ -18,14 +18,14 @@ const Footer = () => {
               href="https://www.linkedin.com/in/jingchengsu/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-white hover:text-white/80 transition-colors"
               aria-label="LinkedIn"
             >
               <FaLinkedin size={24} />
             </a>
             <a 
               href="mailto:sujingcheng1105@gmail.com" 
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-white hover:text-white/80 transition-colors"
               aria-label="Email"
             >
               <FaEnvelope size={24} />
@@ -43,6 +43,7 @@ const Footer = () => {
               <a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a>
               <a href="#experience" className="text-gray-400 hover:text-white transition-colors">Experience</a>
               <a href="#projects" className="text-gray-400 hover:text-white transition-colors">Projects</a>
+              <a href="#resume" className="text-gray-400 hover:text-white transition-colors">Resume</a>
               <a href="#gallery" className="text-gray-400 hover:text-white transition-colors">Gallery</a>
               <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a>
             </nav>

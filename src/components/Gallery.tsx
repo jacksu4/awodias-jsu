@@ -40,11 +40,6 @@ const Gallery = () => {
       src: "/lovable-uploads/9d2f86b3-8449-4d58-9bbb-4ad0eb906c5e.png",
       alt: "Basketball team",
       caption: "Basketball champions"
-    },
-    {
-      src: "/lovable-uploads/8d93f4e6-5de5-4edf-98b3-0d4fa9776a26.png",
-      alt: "Resume",
-      caption: "Professional journey"
     }
   ];
 

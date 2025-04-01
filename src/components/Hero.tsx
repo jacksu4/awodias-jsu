@@ -12,7 +12,7 @@ const Hero = () => {
           Jingcheng Su
         </h1>
         <h2 className="text-xl md:text-3xl font-heading text-white/90 mb-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
-          Software Engineer & Investor
+          Software Engineer, Investor & Life-long Learner
         </h2>
         <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: "400ms" }}>
           From Shenzhen to Silicon Valley, bringing technical expertise and business vision together
