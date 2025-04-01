@@ -1,6 +1,8 @@
+
 import { useState } from "react";
-import { FaBriefcase, FaGraduationCap, FaCode } from "react-icons/fa";
+import { FaBriefcase, FaGraduationCap, FaCode, FaGithub } from "react-icons/fa";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState("work");
@@ -71,6 +73,7 @@ const Experience = () => {
       technologies: "C++",
       period: "Jan 2022 - Apr 2022",
       description: "Database system with storage, modification and deletion capabilities",
+      githubUrl: "https://github.com/jacksu4/AwoDB",
       achievements: [
         "Constructed a full-fledged database system which support storing, modifying and deleting records from scratch",
         "Implemented Buffer and File Manager, Record Manager for the lower level and SQL semantic checking, Relational operations for the upper level",
@@ -82,6 +85,7 @@ const Experience = () => {
       technologies: "Java, Javascript, MySQL",
       period: "Feb 2020 - May 2020",
       description: "Online movie browsing website with database integration",
+      githubUrl: "https://github.com/jacksu4/Fabflix",
       achievements: [
         "Developed an online movie browsing website and used JDBC to interact with MySQL Database",
         "Wrote plain Javascript, JQuery, HTML, CSS for front end and Java Servlet with RESTful APIs for back end",
@@ -173,9 +177,22 @@ const Experience = () => {
                   <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
                     {project.period}
                   </span>
-                  <h3 className="text-xl font-heading font-semibold text-gray-900 mb-1">
-                    {project.name}
-                  </h3>
+                  <div className="flex items-center justify-between mb-1">
+                    <h3 className="text-xl font-heading font-semibold text-gray-900">
+                      {project.name}
+                    </h3>
+                    {project.githubUrl && (
+                      <a 
+                        href={project.githubUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-mountain-blue hover:underline"
+                      >
+                        <FaGithub className="mr-1" />
+                        <span>View on GitHub</span>
+                      </a>
+                    )}
+                  </div>
                   <p className="text-gray-700 mb-4">
                     Technologies: {project.technologies}
                   </p>
