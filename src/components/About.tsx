@@ -33,7 +33,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a 25-year-old Software Engineer originally from Shenzhen, China, and currently based in San Jose, California. I moved to the United States for my education, completing my undergraduate degree at UC Irvine and Master's at Rice University, both in Computer Science.
+              I'm a 25-year-old Software Engineer originally from Shenzhen, China, and currently based in Bay Area, California. I moved to the United States for my education, completing my undergraduate degree at UC Irvine and Master's at Rice University, both in Computer Science.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Currently, I work as a Software Engineer at BILL (NYSE: BILL), where I've been developing innovative solutions for the financial technology industry. I'm also preparing for an exciting transition as an incoming investor planning to relocate to Hong Kong soon.
@@ -58,11 +58,11 @@ const About = () => {
               </li>
               <li className="flex items-start">
                 <span className="font-medium text-gray-900 mr-2">Current Role:</span>
-                <span className="text-gray-700">Software Engineer II at BILL</span>
+                <span className="text-gray-700">Software Engineer at BILL</span>
               </li>
               <li className="flex items-start">
                 <span className="font-medium text-gray-900 mr-2">Next Chapter:</span>
-                <span className="text-gray-700">Investor in Hong Kong</span>
+                <span className="text-gray-700">From Engineer to Investor in Hong Kong</span>
               </li>
             </ul>
             
