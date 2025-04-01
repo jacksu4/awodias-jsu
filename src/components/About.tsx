@@ -6,10 +6,15 @@ import {
   FaPlane, 
   FaGamepad, 
   FaCode,
-  FaDumbbell
+  FaDumbbell,
+  FaBook,
+  FaMusic,
+  FaChess,
+  FaCamera,
+  FaCoffee
 } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
-import { Building } from "lucide-react";
+import { Building, Headphones, Coffee, BookOpen, Camera, ChessKnight } from "lucide-react";
 
 const About = () => {
   const interests = [
@@ -20,6 +25,11 @@ const About = () => {
     { name: "Gaming", icon: FaGamepad },
     { name: "Coding", icon: FaCode },
     { name: "Fitness", icon: FaDumbbell },
+    { name: "Reading", icon: FaBook },
+    { name: "Music", icon: FaMusic },
+    { name: "Chess", icon: FaChess },
+    { name: "Photography", icon: FaCamera },
+    { name: "Coffee", icon: FaCoffee },
   ];
 
   return (
