@@ -2,11 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/97be3f4f-ebdf-4794-a5b8-b2d3a03d1c52
-
-## How can I edit this code?
-
-There are several ways of editing your application.
+**URL**: awodias.org
 
 **Use Lovable**
 
