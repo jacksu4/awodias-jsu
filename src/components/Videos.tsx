@@ -23,16 +23,9 @@ const Videos = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="basketball" className="max-w-4xl mx-auto">
+        <Tabs defaultValue="table-tennis" className="max-w-4xl mx-auto">
           <div className="overflow-hidden rounded-md mb-10">
             <TabsList className="grid grid-cols-2 bg-gray-100">
-              <TabsTrigger 
-                value="basketball" 
-                className="text-lg py-3 data-[state=active]:bg-white flex items-center justify-center"
-              >
-                <FaBasketballBall className="mr-2 h-5 w-5" />
-                Basketball
-              </TabsTrigger>
               <TabsTrigger 
                 value="table-tennis" 
                 className="text-lg py-3 data-[state=active]:bg-white flex items-center justify-center"
@@ -40,30 +33,15 @@ const Videos = () => {
                 <FaTableTennis className="mr-2 h-5 w-5" />
                 Table Tennis
               </TabsTrigger>
+              <TabsTrigger 
+                value="basketball" 
+                className="text-lg py-3 data-[state=active]:bg-white flex items-center justify-center"
+              >
+                <FaBasketballBall className="mr-2 h-5 w-5" />
+                Basketball
+              </TabsTrigger>
             </TabsList>
           </div>
-          
-          <TabsContent value="basketball">
-            <Card>
-              <CardHeader>
-                <CardTitle>Basketball Skills</CardTitle>
-                <CardDescription>Watch me playing basketball</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="aspect-video">
-                  <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/RCBwdvMHqmU" 
-                    title="Basketball" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
           
           <TabsContent value="table-tennis">
             <Card>
@@ -78,6 +56,28 @@ const Videos = () => {
                     height="100%" 
                     src="https://www.youtube.com/embed/gLNh2lKHfck" 
                     title="Table Tennis" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          
+          <TabsContent value="basketball">
+            <Card>
+              <CardHeader>
+                <CardTitle>Basketball Skills</CardTitle>
+                <CardDescription>Watch me playing basketball</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="aspect-video">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/RCBwdvMHqmU" 
+                    title="Basketball" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowFullScreen
