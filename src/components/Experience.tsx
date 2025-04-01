@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { FaBriefcase, FaGraduationCap, FaCode } from "react-icons/fa";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -122,11 +123,10 @@ const Experience = () => {
           <TabsContent value="work" className="mt-6 space-y-12">
             {workExperience.map((job, index) => (
               <div key={index} className="relative pl-8 md:pl-0">
-                <div className="hidden md:block absolute top-0 left-1/2 w-px h-full bg-gray-300 -translate-x-1/2"></div>
+                {/* Remove blue dot with vertical line */}
                 
                 <div className={`md:flex md:items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse md:text-right'}`}>
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} relative`}>
-                    <div className="hidden md:block absolute top-0 w-4 h-4 rounded-full bg-mountain-blue border-4 border-white left-1/2 -translate-x-1/2"></div>
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
                         {job.period}
@@ -140,7 +140,7 @@ const Experience = () => {
                       <ul className="space-y-2 text-gray-600">
                         {job.achievements.map((achievement, i) => (
                           <li key={i} className="flex">
-                            <span className={`mr-2 ${index % 2 === 1 && 'md:order-last md:ml-2'}`}>•</span>
+                            <span className="mr-2">•</span>
                             <span>{achievement}</span>
                           </li>
                         ))}
@@ -156,11 +156,10 @@ const Experience = () => {
           <TabsContent value="education" className="mt-6 space-y-12">
             {educationExperience.map((edu, index) => (
               <div key={index} className="relative pl-8 md:pl-0">
-                <div className="hidden md:block absolute top-0 left-1/2 w-px h-full bg-gray-300 -translate-x-1/2"></div>
+                {/* Remove blue dot with vertical line */}
                 
                 <div className={`md:flex md:items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse md:text-right'}`}>
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} relative`}>
-                    <div className="hidden md:block absolute top-0 w-4 h-4 rounded-full bg-mountain-blue border-4 border-white left-1/2 -translate-x-1/2"></div>
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
                         {edu.period}
@@ -185,11 +184,10 @@ const Experience = () => {
           <TabsContent value="projects" className="mt-6 space-y-12">
             {projects.map((project, index) => (
               <div key={index} className="relative pl-8 md:pl-0">
-                <div className="hidden md:block absolute top-0 left-1/2 w-px h-full bg-gray-300 -translate-x-1/2"></div>
+                {/* Remove blue dot with vertical line */}
                 
                 <div className={`md:flex md:items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse md:text-right'}`}>
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} relative`}>
-                    <div className="hidden md:block absolute top-0 w-4 h-4 rounded-full bg-mountain-blue border-4 border-white left-1/2 -translate-x-1/2"></div>
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <span className="inline-block px-3 py-1 bg-mountain-blue/10 text-mountain-blue text-sm font-medium rounded-full mb-3">
                         {project.period}
@@ -206,7 +204,7 @@ const Experience = () => {
                       <ul className="space-y-2 text-gray-600">
                         {project.achievements.map((achievement, i) => (
                           <li key={i} className="flex">
-                            <span className={`mr-2 ${index % 2 === 1 && 'md:order-last md:ml-2'}`}>•</span>
+                            <span className="mr-2">•</span>
                             <span>{achievement}</span>
                           </li>
                         ))}
