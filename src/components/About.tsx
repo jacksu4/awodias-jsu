@@ -1,4 +1,3 @@
-
 import { 
   FaBasketballBall, 
   FaTableTennis, 
@@ -9,14 +8,12 @@ import {
   FaDumbbell,
   FaBook,
   FaMusic,
-  FaChess,
   FaCamera,
-  FaCoffee,
   FaLightbulb,
   FaUtensils
 } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
-import { Building, Headphones, Coffee, BookOpen, Camera, Chess } from "lucide-react";
+import { Building, Headphones, BookOpen, Camera } from "lucide-react";
 
 const About = () => {
   const interests = [
@@ -27,13 +24,11 @@ const About = () => {
     { name: "Gaming", icon: FaGamepad },
     { name: "Coding", icon: FaCode },
     { name: "Fitness", icon: FaDumbbell },
-    { name: "📚 Reading", icon: FaBook },
-    { name: "💡 Investing", icon: FaLightbulb },
-    { name: "🎧 Music", icon: FaMusic },
-    { name: "🍣 Foodie", icon: FaUtensils },
-    { name: "Chess", icon: FaChess },
+    { name: "Reading", icon: FaBook },
+    { name: "Investing", icon: FaLightbulb },
+    { name: "Music", icon: FaMusic },
+    { name: "Foodie", icon: FaUtensils },
     { name: "Photography", icon: FaCamera },
-    { name: "Coffee", icon: FaCoffee },
   ];
 
   return (
@@ -47,7 +42,6 @@ const About = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Profile Card */}
           <Card className="overflow-hidden border-none shadow-lg h-full">
             <div className="relative">
               <img 
@@ -63,7 +57,6 @@ const About = () => {
             </div>
           </Card>
           
-          {/* Bio Information */}
           <div className="space-y-6 lg:col-span-2">
             <p className="text-lg text-gray-700 leading-relaxed">
               I'm a 25-year-old Software Engineer from Shenzhen, China, now living in the Bay Area. I earned my Computer Science degrees from UC Irvine (BS) and Rice University (MS). With a strong foundation in both academic knowledge and practical experience, I've been focusing on developing innovative solutions that bridge technology and business needs.
@@ -77,7 +70,6 @@ const About = () => {
           </div>
         </div>
         
-        {/* Quick Facts and Interests */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           <Card className="shadow-md p-6 h-full">
             <h3 className="text-xl font-heading font-semibold text-gray-900 mb-6 flex items-center">
