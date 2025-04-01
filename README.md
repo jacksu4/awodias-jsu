@@ -1,69 +1,44 @@
 # Jingcheng Su's Personal Website
 
-## Project info
+Welcome to the source code of my personal website, [awodias.org](https://awodias.org) — a space where I share my work and interests
 
-Check out my personal website: [awodias.org](https://awodias.org)
+---
 
-**Use Lovable**
+## 🌐 Project Info
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/97be3f4f-ebdf-4794-a5b8-b2d3a03d1c52) and start prompting.
+- **Website**: [awodias.org](https://awodias.org)  
+- **Domain Provider**: Cloudflare  
+- **Built With**:  
+  - Vite  
+  - TypeScript  
+  - React  
+  - shadcn/ui  
+  - Tailwind CSS  
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🚀 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🔧 Use Lovable (No Setup Required)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Visit the [Lovable Project](https://lovable.dev/projects/97be3f4f-ebdf-4794-a5b8-b2d3a03d1c52) and start prompting.
+- All changes will be committed automatically to this repo.
 
-Follow these steps:
+### 💻 Work Locally with Your Preferred IDE
+
+If you prefer to code locally, follow these steps:
+
+> Ensure [Node.js and npm](https://github.com/nvm-sh/nvm#installing-and-updating) are installed (use `nvm` if preferred).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# 1. Clone the repository
 git clone https://github.com/jacksu4/awodias-jsu.git
 
-# Step 2: Navigate to the project directory.
+# 2. Navigate to the project folder
 cd awodias-jsu
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3. Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Start the development server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/97be3f4f-ebdf-4794-a5b8-b2d3a03d1c52) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
