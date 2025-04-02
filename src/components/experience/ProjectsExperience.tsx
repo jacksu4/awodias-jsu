@@ -13,6 +13,18 @@ type ProjectProps = {
 
 const projects: ProjectProps[] = [
   {
+    name: "AwoDB",
+    technologies: "C++",
+    period: "Jan 2022 - Apr 2022",
+    description: "Database system with storage, modification and deletion capabilities",
+    githubUrl: "https://github.com/jacksu4/AwoDB",
+    achievements: [
+      "Constructed a full-fledged database system which support storing, modifying and deleting records from scratch",
+      "Implemented Buffer and File Manager, Record Manager for the lower level and SQL semantic checking, Relational operations for the upper level",
+      "Reduced database processing time by 50% by using LRU Algorithm for buffer management, B+ Tree implementation for data storage and TPMMS for data sort"
+    ]
+  },
+  {
     name: "IrisShopper",
     technologies: "Iris MVC Framework, Golang, RabbitMQ",
     period: "June 2021 - Aug 2021",
@@ -24,18 +36,6 @@ const projects: ProjectProps[] = [
       "Added RabbitMQ to enable asynchronous database operations which reduced database crash rate by 30%",
       "Used Cookie Validation and JSON Web Token to add sufficient security on login and purchase session",
       "Tested the website using wrk and Restructured the code in Interface-Oriented Design to enable easy Scale-up"
-    ]
-  },
-  {
-    name: "AwoDB",
-    technologies: "C++",
-    period: "Jan 2022 - Apr 2022",
-    description: "Database system with storage, modification and deletion capabilities",
-    githubUrl: "https://github.com/jacksu4/AwoDB",
-    achievements: [
-      "Constructed a full-fledged database system which support storing, modifying and deleting records from scratch",
-      "Implemented Buffer and File Manager, Record Manager for the lower level and SQL semantic checking, Relational operations for the upper level",
-      "Reduced database processing time by 50% by using LRU Algorithm for buffer management, B+ Tree implementation for data storage and TPMMS for data sort"
     ]
   },
   {
