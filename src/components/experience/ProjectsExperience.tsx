@@ -13,6 +13,20 @@ type ProjectProps = {
 
 const projects: ProjectProps[] = [
   {
+    name: "IrisShopper",
+    technologies: "Iris MVC Framework, Golang, RabbitMQ",
+    period: "June 2021 - Aug 2021",
+    description: "Shopping website with high performance capabilities",
+    githubUrl: "https://github.com/jacksu4/IrisShopper",
+    achievements: [
+      "Implemented a shopping website using Iris MVC Framework and Golang's Frontend Template which can endure 20000+ QPS in snap up sessions",
+      "Utilized Content Delivery Network on frontend, Server Load Balancer and Consistent Hashing Algorithm on back end to alleviate server side pressure by over 80%",
+      "Added RabbitMQ to enable asynchronous database operations which reduced database crash rate by 30%",
+      "Used Cookie Validation and JSON Web Token to add sufficient security on login and purchase session",
+      "Tested the website using wrk and Restructured the code in Interface-Oriented Design to enable easy Scale-up"
+    ]
+  },
+  {
     name: "AwoDB",
     technologies: "C++",
     period: "Jan 2022 - Apr 2022",

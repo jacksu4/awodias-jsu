@@ -43,12 +43,36 @@ const workExperience: JobProps[] = [
     ]
   },
   {
+    company: "Tesla",
+    role: "Application Support Engineer Intern",
+    location: "Shanghai, China",
+    period: "July 2021",
+    achievements: [
+      "Developed an internal supporting tool for MFS (Material Flow System) in Shanghai Giga Factory which improved 20% of the coworkers' productivity (Python, Pandas, MySQL)",
+      "Upgraded the Splunk dashboard to visualize MFS's Kafka and SQL statistics for 20+ Support Engineers",
+      "Facilitated vehicle manufacture by writing SQL and SPL queries to find and fix discrepancies in data and operations caused by the system and factory workers"
+    ]
+  },
+  {
     company: "Douban",
     role: "Software Engineer Intern",
     location: "Beijing, China",
     period: "Oct 2020 - Dec 2020",
     achievements: [
-      "Improved 10% of user retention rate by building the back end of Badge ranking system: allowing users to see infos of different badges which acquired by watching series of Movies"
+      "Improved 10% of user retention rate by building the back end of Badge ranking system: allowing users to see infos of different badges which acquired by watching series of Movies",
+      "Enabled push functionality toward all active Douban App user for operation teams using PySpark",
+      "Fixed back end bugs to prevent discrepancies on users' profile display",
+      "Participated in Agile Development: took part in weekly scrum meetings and collaborated with project managers and software engineers to meet deadlines on every tasks"
+    ]
+  },
+  {
+    company: "Lenovo",
+    role: "Software Engineer Intern",
+    location: "Shenzhen, China",
+    period: "June 2019 - Sep 2019",
+    achievements: [
+      "Encapsulated machine learning algorithms into Hyperminer (Lenovo machine learning platform) using Python's Scikit-Learn and XGBoost Library",
+      "Upgraded Hyperminer's CRUD Operations using Python's Django Framework and wrote API documentations"
     ]
   }
 ];

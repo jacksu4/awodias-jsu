@@ -1,14 +1,12 @@
 
 import { useState } from "react";
 import { FaBriefcase, FaGraduationCap, FaCode } from "react-icons/fa";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import WorkExperience from "./experience/WorkExperience";
 import EducationExperience from "./experience/EducationExperience";
 import ProjectsExperience from "./experience/ProjectsExperience";
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState("work");
-
   return (
     <section id="experience" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
