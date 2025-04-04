@@ -40,7 +40,7 @@ export function AiChat() {
       
       const typeNextChar = () => {
         if (indexRef.current < message.length) {
-          setDisplayedContent(prev => prev + message[indexRef.current]);
+          setDisplayedContent(message.substring(0, indexRef.current + 1));
           indexRef.current++;
           setTimeout(typeNextChar, 30); // Speed of typing
         } else {
