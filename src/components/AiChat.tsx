@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { generateText } from "@/services/togetherAiService";
@@ -30,7 +29,6 @@ export function AiChat() {
     }
   }, [messages, displayedContent]);
   
-  // Effect for the typing animation - only for the latest assistant message
   useEffect(() => {
     if (messages.length > 0 && messages[messages.length - 1].role === "assistant") {
       const message = messages[messages.length - 1].content;
@@ -43,7 +41,7 @@ export function AiChat() {
         if (indexRef.current < message.length) {
           setDisplayedContent(message.substring(0, indexRef.current + 1));
           indexRef.current++;
-          setTimeout(typeNextChar, 30); // Speed of typing
+          setTimeout(typeNextChar, 30);
         } else {
           setIsTyping(false);
         }
@@ -53,7 +51,6 @@ export function AiChat() {
     }
   }, [messages]);
 
-  // Handle scroll events to detect user scrolling
   const handleScroll = () => {
     if (messagesContainerRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = messagesContainerRef.current;
@@ -73,10 +70,9 @@ export function AiChat() {
     setMessages(prev => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
-    autoScrollRef.current = true; // Reset auto-scroll when sending new message
+    autoScrollRef.current = true;
 
     try {
-      // Format the conversation for the AI
       const conversationContext = messages.map(msg => 
         `${msg.role === 'user' ? 'Human' : 'Assistant'}: ${msg.content}`
       ).join('\n');
@@ -178,7 +174,6 @@ export function AiChat() {
             </div>
           )}
 
-          {/* Scroll to bottom button */}
           {showScrollButton && (
             <button 
               onClick={scrollToBottom}
@@ -189,25 +184,27 @@ export function AiChat() {
           )}
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-2">
-          <Textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask JS.AI anything..."
-            className="flex-1 bg-[#0d1528]/70 border border-gray-700/50 rounded-lg px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-500/50 focus:border-purple-500/50 min-h-[50px] max-h-[120px] resize-none"
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && !e.shiftKey) {
-                e.preventDefault();
-                handleSend();
-              }
-            }}
-            disabled={isLoading}
-          />
+        <div className="flex items-center gap-2">
+          <div className="flex-1">
+            <Textarea
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Ask JS.AI anything..."
+              className="bg-[#0d1528]/70 border border-gray-700/50 rounded-lg px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-500/50 focus:border-purple-500/50 min-h-[50px] max-h-[120px] resize-none w-full"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSend();
+                }
+              }}
+              disabled={isLoading}
+            />
+          </div>
           
           <Button
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white sm:w-[100px] h-[50px] rounded-lg shadow-lg shadow-purple-900/20"
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white h-[50px] px-6 rounded-lg shadow-lg shadow-purple-900/20 self-center"
           >
             {isLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
