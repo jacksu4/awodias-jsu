@@ -1,14 +1,14 @@
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
 import AiAssistant from "./pages/AiAssistant";
 
 function App() {
-  
   return (
     <BrowserRouter>
       <Navbar />
