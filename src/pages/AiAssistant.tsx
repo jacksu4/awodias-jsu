@@ -50,7 +50,7 @@ export default function AiAssistant() {
         
         <div className="flex items-center justify-center gap-2 mb-4">
           <Sparkles size={16} className="text-yellow-300 animate-pulse" />
-          <p className="text-gray-300 text-lg">Advanced Neural Assistant</p>
+          <p className="text-gray-300 text-lg">Advanced Personal Assistant</p>
           <Sparkles size={16} className="text-yellow-300 animate-pulse" />
         </div>
         
