@@ -1,4 +1,3 @@
-
 import { 
   FaBasketballBall, 
   FaTableTennis, 
@@ -11,12 +10,10 @@ import {
   FaMusic,
   FaCamera,
   FaLightbulb,
-  FaUtensils,
-  FaMediumM
+  FaUtensils
 } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building, Headphones, BookOpen, Camera } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const About = () => {
   const interests = [
@@ -70,15 +67,6 @@ const About = () => {
             <p className="text-lg text-gray-700 leading-relaxed">
               This next chapter is about integration — of tech, finance, and global perspective. I'm always open to connecting with people who think differently and build boldly.
             </p>
-            
-            <div className="flex items-center space-x-4 pt-4">
-              <Button asChild variant="outline" className="flex items-center gap-2">
-                <a href="https://jsu4.medium.com/" target="_blank" rel="noopener noreferrer">
-                  <FaMediumM className="text-gray-700" />
-                  <span>Read my Medium articles</span>
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
         
