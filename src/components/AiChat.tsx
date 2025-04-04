@@ -15,7 +15,6 @@ export function AiChat() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [displayedContent, setDisplayedContent] = useState("");
-  const [currentMessageIndex, setCurrentMessageIndex] = useState(-1);
   const [isTyping, setIsTyping] = useState(false);
   const [isUserScrolling, setIsUserScrolling] = useState(false);
   
@@ -30,10 +29,10 @@ export function AiChat() {
     }
   }, [messages, displayedContent]);
   
-  // Effect for the typing animation
+  // Effect for the typing animation - only for the latest assistant message
   useEffect(() => {
-    if (currentMessageIndex >= 0 && messages[currentMessageIndex]?.role === "assistant") {
-      const message = messages[currentMessageIndex].content;
+    if (messages.length > 0 && messages[messages.length - 1].role === "assistant") {
+      const message = messages[messages.length - 1].content;
       currentMessageRef.current = message;
       indexRef.current = 0;
       setIsTyping(true);
@@ -51,7 +50,7 @@ export function AiChat() {
       
       typeNextChar();
     }
-  }, [currentMessageIndex, messages]);
+  }, [messages]);
 
   // Handle scroll events to detect user scrolling
   const handleScroll = () => {
@@ -94,7 +93,6 @@ export function AiChat() {
       };
 
       setMessages(prev => [...prev, assistantMessage]);
-      setCurrentMessageIndex(messages.length + 1); // Set to the index of the new assistant message
     } catch (error) {
       console.error("Error sending message:", error);
       toast.error("Failed to generate response. Please try again.");
@@ -131,7 +129,7 @@ export function AiChat() {
                   <p className="text-sm font-semibold mb-1 text-gray-300">
                     {message.role === "assistant" ? "AI Assistant" : "You"}
                   </p>
-                  {message.role === "assistant" && index === currentMessageIndex && isTyping ? (
+                  {message.role === "assistant" && index === messages.length - 1 && isTyping ? (
                     <p className="text-white whitespace-pre-wrap">
                       {displayedContent}
                     </p>
