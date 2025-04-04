@@ -57,7 +57,7 @@ const Hero = () => {
         </p>
         <div className="flex justify-center mb-12">
           <blockquote className="italic text-xl md:text-2xl text-white/90 animate-fade-in font-heading" style={{ animationDelay: "500ms" }}>
-            Always dream big and never give up.
+            Curious. Grateful. Never done.
           </blockquote>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "600ms" }}>
