@@ -97,14 +97,17 @@ const Hero = () => {
           <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white/40 hover:bg-white/10 backdrop-blur-sm transform transition-transform hover:scale-105">
             <a href="#contact">Contact Me</a>
           </Button>
-          <Button asChild size="lg" className="relative bg-gradient-to-r from-purple-400/20 to-pink-400/20 text-white backdrop-blur-sm transform transition-transform hover:scale-105 group overflow-hidden">
-            <Link to="/ai-assistant" className="flex items-center gap-2 z-10 relative">
-              <Zap className="h-4 w-4 text-yellow-300" />
-              <span>JS.AI</span>
-            </Link>
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity"></span>
-            <span className="absolute -inset-px rounded-md bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500"></span>
-          </Button>
+          
+          {/* Fixed AI Assistant button */}
+          <div className="relative group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 rounded-md blur-sm group-hover:opacity-100 transition duration-200"></div>
+            <Button asChild size="lg" className="relative bg-gradient-to-r from-purple-400/20 to-pink-400/20 text-white backdrop-blur-sm transform transition-transform hover:scale-105 group-hover:bg-black/20 w-full">
+              <Link to="/ai-assistant" className="flex items-center justify-center gap-2">
+                <Zap className="h-4 w-4 text-yellow-300" />
+                <span>JS.AI</span>
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
       
