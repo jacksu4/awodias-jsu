@@ -10,7 +10,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/", // Changed to absolute paths since relative paths didn't work
+  // Use an empty string for base to support both subpath and root deployments
+  base: "", 
   plugins: [
     react(),
     mode === 'development' &&
@@ -26,12 +27,14 @@ export default defineConfig(({ mode }) => ({
     assetsDir: "assets",
     emptyOutDir: true,
     minify: true,
+    sourcemap: false,
+    // Use hash-free naming for better Cloudflare compatibility
     rollupOptions: {
       output: {
-        manualChunks: undefined, // Disable code splitting to reduce number of assets
         entryFileNames: "assets/[name].js",
         chunkFileNames: "assets/[name].js",
-        assetFileNames: "assets/[name].[ext]"
+        assetFileNames: "assets/[name].[ext]",
+        manualChunks: undefined, // Disable code splitting
       },
     },
   },
