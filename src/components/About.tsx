@@ -73,7 +73,7 @@ const About = () => {
             
             <div className="flex items-center space-x-4 pt-4">
               <Button asChild variant="outline" className="flex items-center gap-2">
-                <a href="https://awodias.org/?source=user_about----------------------6cb8bf22cd6b----------------------" target="_blank" rel="noopener noreferrer">
+                <a href="https://jsu4.medium.com/" target="_blank" rel="noopener noreferrer">
                   <FaMediumM className="text-gray-700" />
                   <span>Read my Medium articles</span>
                 </a>
