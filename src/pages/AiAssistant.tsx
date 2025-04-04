@@ -5,29 +5,29 @@ import { ArrowLeft } from "lucide-react";
 
 export default function AiAssistant() {
   return (
-    <div className="bg-gradient-to-br from-[#1a73e8] to-[#4285f4] min-h-screen">
-      <div className="container py-12 space-y-8 mx-auto px-4">
-        <div className="flex items-center mb-8">
-          <Link to="/" className="flex items-center text-white hover:text-white/90 transition-colors mr-4">
-            <ArrowLeft size={20} className="mr-2" /> Back to Home
-          </Link>
-        </div>
+    <div className="bg-[#0a192f] min-h-screen flex flex-col items-center justify-center p-4">
+      <div className="absolute top-8 left-8">
+        <Link to="/" className="flex items-center text-gray-300 hover:text-white transition-colors mr-4">
+          <ArrowLeft size={20} className="mr-2" /> Back to Home
+        </Link>
+      </div>
+      
+      <div className="w-full max-w-4xl mx-auto text-center mb-8">
+        <h1 className="text-6xl md:text-8xl font-bold text-gray-200 mb-4">
+          JS.AI
+        </h1>
+        <p className="text-gray-300 text-xl md:text-2xl max-w-2xl mx-auto">
+          Ask me anything about Jingcheng,
+          or anything else. This AI is 
+          still in development.
+        </p>
+      </div>
+      
+      <div className="w-full max-w-4xl bg-[#0a1625] bg-opacity-80 rounded-xl border border-gray-700 shadow-2xl p-8 mx-auto">
+        <AiChat />
         
-        <div className="text-center space-y-4 mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white font-heading">
-            Personal AI Assistant
-          </h1>
-          <p className="text-white/90 max-w-3xl mx-auto text-lg">
-            Powered by advanced AI, this assistant can help answer questions about my background, 
-            experience, or any other inquiries you might have.
-          </p>
-        </div>
-        
-        <div className="bg-white/95 rounded-xl shadow-2xl p-0 max-w-4xl mx-auto overflow-hidden">
-          <div className="p-6 border-b border-gray-100">
-            <h2 className="text-xl font-semibold">Chat with AI Assistant</h2>
-          </div>
-          <AiChat />
+        <div className="mt-8 text-center text-gray-400">
+          powered by <span className="font-semibold text-gray-200">together.ai</span>
         </div>
       </div>
     </div>
