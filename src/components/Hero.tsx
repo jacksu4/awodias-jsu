@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Top Navigation */}
       <nav className="absolute top-0 left-0 right-0 py-4 px-6 z-20">
-        <div className="container mx-auto flex justify-end">
+        <div className="container mx-auto flex justify-center">
           <ul className="hidden md:flex items-center space-x-8 font-medium">
             <li>
               <a href="#about" className="text-white/90 hover:text-white transition-colors">About</a>
@@ -29,9 +29,6 @@ const Hero = () => {
             </li>
             <li>
               <a href="#contact" className="text-white/90 hover:text-white transition-colors">Contact</a>
-            </li>
-            <li>
-              <a href="#connect" className="text-white/90 hover:text-white font-bold transition-colors">Let's Connect</a>
             </li>
           </ul>
         </div>
