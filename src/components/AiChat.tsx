@@ -3,7 +3,8 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { generateText } from "@/services/togetherAiService";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
+import { Loader2, BrainCircuit, User, Send, ChevronDown } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
 
 interface Message {
   content: string;
@@ -101,34 +102,57 @@ export function AiChat() {
     }
   };
 
+  const scrollToBottom = () => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+      autoScrollRef.current = true;
+    }
+  };
+
+  const showScrollButton = messagesContainerRef.current && 
+    messagesContainerRef.current.scrollHeight > messagesContainerRef.current.clientHeight && 
+    !autoScrollRef.current;
+
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-semibold text-white/90 mb-4">Chat with AI Assistant</h2>
-      
       <div className="flex flex-col space-y-4">
         <div 
           ref={messagesContainerRef}
-          className="bg-[#0f213a] rounded-lg border border-gray-700 p-4 h-[400px] overflow-y-auto flex flex-col space-y-4"
+          className="bg-[#0d1528]/50 rounded-lg border border-gray-700/50 p-4 h-[400px] overflow-y-auto flex flex-col space-y-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
           onScroll={handleScroll}
         >
           {messages.length === 0 ? (
-            <div className="flex items-center justify-center h-full text-gray-400">
-              Start a conversation with the AI assistant.
+            <div className="flex flex-col items-center justify-center h-full text-gray-400 gap-4">
+              <BrainCircuit size={40} className="text-purple-400 opacity-70" />
+              <div className="text-center space-y-2">
+                <p className="text-lg font-medium text-gray-300">Start a conversation with JS.AI</p>
+                <p className="text-sm text-gray-500">Ask anything about Jingcheng or any other topic</p>
+              </div>
             </div>
           ) : (
             <div className="space-y-4">
               {messages.map((message, index) => (
                 <div
                   key={index}
-                  className={`p-3 rounded-lg ${
+                  className={`p-4 rounded-lg border transition-all ${
                     message.role === "assistant" 
-                      ? "bg-[#1a2a47] border border-gray-700" 
-                      : "bg-[#172136] border border-gray-700"
+                      ? "bg-gradient-to-r from-[#1a2a47]/70 to-[#1d2c4a]/70 border-purple-900/30 shadow-lg" 
+                      : "bg-gradient-to-r from-[#172136]/90 to-[#172338]/90 border-gray-700/30"
                   }`}
                 >
-                  <p className="text-sm font-semibold mb-1 text-gray-300">
-                    {message.role === "assistant" ? "AI Assistant" : "You"}
-                  </p>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className={`p-1 rounded-full ${message.role === "assistant" ? "bg-purple-500/20" : "bg-blue-500/20"}`}>
+                      {message.role === "assistant" ? (
+                        <BrainCircuit size={16} className="text-purple-300" />
+                      ) : (
+                        <User size={16} className="text-blue-300" />
+                      )}
+                    </div>
+                    <p className="text-sm font-medium text-gray-300">
+                      {message.role === "assistant" ? "JS.AI" : "You"}
+                    </p>
+                  </div>
+
                   {message.role === "assistant" && index === messages.length - 1 && isTyping ? (
                     <p className="text-white whitespace-pre-wrap">
                       {displayedContent}
@@ -141,21 +165,36 @@ export function AiChat() {
                 </div>
               ))}
               {isLoading && (
-                <div className="flex items-center justify-center p-4 text-gray-300">
-                  <Loader2 className="h-4 w-4 animate-spin mr-2" />
-                  <span>AI is thinking...</span>
+                <div className="flex items-center justify-center p-4 text-gray-300 bg-[#1a2a47]/30 border border-purple-900/20 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    <div className="flex items-center gap-1">
+                      <span className="text-sm">JS.AI is thinking</span>
+                      <span className="animate-pulse">...</span>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
           )}
+
+          {/* Scroll to bottom button */}
+          {showScrollButton && (
+            <button 
+              onClick={scrollToBottom}
+              className="absolute bottom-24 right-12 bg-gray-800/80 text-gray-300 p-2 rounded-full shadow-lg hover:bg-gray-700/80 transition-colors"
+            >
+              <ChevronDown size={20} />
+            </button>
+          )}
         </div>
         
-        <div className="flex items-center">
-          <input
+        <div className="flex flex-col sm:flex-row gap-2">
+          <Textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Type a message..."
-            className="flex-1 bg-[#0f213a] border border-gray-700 rounded-lg px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 h-[50px]"
+            placeholder="Ask JS.AI anything..."
+            className="flex-1 bg-[#0d1528]/70 border border-gray-700/50 rounded-lg px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-500/50 focus:border-purple-500/50 min-h-[50px] max-h-[120px] resize-none"
             onKeyDown={(e) => {
               if (e.key === "Enter" && !e.shiftKey) {
                 e.preventDefault();
@@ -168,14 +207,16 @@ export function AiChat() {
           <Button
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
-            className="bg-gray-600 hover:bg-gray-500 text-white ml-2 h-[50px] w-[100px]"
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white sm:w-[100px] h-[50px] rounded-lg shadow-lg shadow-purple-900/20"
           >
             {isLoading ? (
-              <>
-                <Loader2 className="h-4 w-4 animate-spin mr-2" />
-                <span>Wait</span>
-              </>
-            ) : "Send"}
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <div className="flex items-center gap-2">
+                <span>Send</span>
+                <Send size={16} />
+              </div>
+            )}
           </Button>
         </div>
       </div>
