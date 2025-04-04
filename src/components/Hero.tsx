@@ -1,11 +1,43 @@
-
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* 更新背景设计，添加更多生动元素 */}
+    <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+      {/* Top Navigation */}
+      <nav className="absolute top-0 left-0 right-0 py-4 px-6 z-20">
+        <div className="container mx-auto flex justify-end">
+          <ul className="hidden md:flex items-center space-x-8 font-medium">
+            <li>
+              <a href="#about" className="text-white/90 hover:text-white transition-colors">About</a>
+            </li>
+            <li>
+              <a href="#experience" className="text-white/90 hover:text-white transition-colors">Experience</a>
+            </li>
+            <li>
+              <a href="#skills" className="text-white/90 hover:text-white transition-colors">Skills</a>
+            </li>
+            <li>
+              <a href="#resume" className="text-white/90 hover:text-white transition-colors">Resume</a>
+            </li>
+            <li>
+              <a href="#videos" className="text-white/90 hover:text-white transition-colors">Videos</a>
+            </li>
+            <li>
+              <a href="#gallery" className="text-white/90 hover:text-white transition-colors">Gallery</a>
+            </li>
+            <li>
+              <a href="#contact" className="text-white/90 hover:text-white transition-colors">Contact</a>
+            </li>
+            <li>
+              <a href="#connect" className="text-white/90 hover:text-white font-bold transition-colors">Let's Connect</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      {/* Background elements - keep existing code */}
       <div className="absolute inset-0 bg-gradient-to-br from-mountain-dark via-mountain-blue to-purple-400 z-0">
         {/* 彩色漂浮元素 */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-pink-300/20 rounded-full blur-xl animate-float" style={{ animationDelay: "0.5s" }}></div>
@@ -66,6 +98,9 @@ const Hero = () => {
           </Button>
           <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white/40 hover:bg-white/10 backdrop-blur-sm transform transition-transform hover:scale-105">
             <a href="#contact">Contact Me</a>
+          </Button>
+          <Button asChild size="lg" className="bg-gradient-to-r from-mountain-blue to-purple-400 text-white hover:opacity-90 backdrop-blur-sm border border-white/20 transform transition-transform hover:scale-105">
+            <Link to="/ai-assistant">Personal AI Assistant</Link>
           </Button>
         </div>
       </div>
