@@ -17,13 +17,15 @@ export function AiChat() {
   const [displayedContent, setDisplayedContent] = useState("");
   const [currentMessageIndex, setCurrentMessageIndex] = useState(-1);
   const [isTyping, setIsTyping] = useState(false);
+  const [isUserScrolling, setIsUserScrolling] = useState(false);
   
   const messagesContainerRef = useRef<HTMLDivElement>(null);
   const currentMessageRef = useRef<string>("");
   const indexRef = useRef<number>(0);
+  const autoScrollRef = useRef<boolean>(true);
 
   useEffect(() => {
-    if (messagesContainerRef.current) {
+    if (messagesContainerRef.current && autoScrollRef.current) {
       messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
     }
   }, [messages, displayedContent]);
@@ -51,6 +53,15 @@ export function AiChat() {
     }
   }, [currentMessageIndex, messages]);
 
+  // Handle scroll events to detect user scrolling
+  const handleScroll = () => {
+    if (messagesContainerRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = messagesContainerRef.current;
+      const isAtBottom = scrollHeight - scrollTop - clientHeight < 10;
+      autoScrollRef.current = isAtBottom;
+    }
+  };
+
   const handleSend = async () => {
     if (!input.trim()) return;
     
@@ -62,6 +73,7 @@ export function AiChat() {
     setMessages(prev => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
+    autoScrollRef.current = true; // Reset auto-scroll when sending new message
 
     try {
       // Format the conversation for the AI
@@ -99,6 +111,7 @@ export function AiChat() {
         <div 
           ref={messagesContainerRef}
           className="bg-[#0f213a] rounded-lg border border-gray-700 p-4 h-[400px] overflow-y-auto flex flex-col space-y-4"
+          onScroll={handleScroll}
         >
           {messages.length === 0 ? (
             <div className="flex items-center justify-center h-full text-gray-400">
@@ -119,20 +132,12 @@ export function AiChat() {
                     {message.role === "assistant" ? "AI Assistant" : "You"}
                   </p>
                   {message.role === "assistant" && index === currentMessageIndex && isTyping ? (
-                    <p className="text-gray-200 whitespace-pre-wrap">
-                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                        {displayedContent}
-                      </span>
+                    <p className="text-white whitespace-pre-wrap">
+                      {displayedContent}
                     </p>
                   ) : (
-                    <p className="text-gray-200 whitespace-pre-wrap">
-                      {message.role === "assistant" && index === messages.length - 1 && index === currentMessageIndex ? (
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                          {displayedContent}
-                        </span>
-                      ) : (
-                        message.content
-                      )}
+                    <p className="text-white whitespace-pre-wrap">
+                      {message.content}
                     </p>
                   )}
                 </div>
@@ -165,7 +170,7 @@ export function AiChat() {
           <Button
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
-            className="bg-gray-600 hover:bg-gray-500 text-white ml-2 h-[50px] px-6"
+            className="bg-gray-600 hover:bg-gray-500 text-white ml-2 h-[50px] w-[100px]"
           >
             {isLoading ? (
               <>
