@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { generateText } from "@/services/togetherAiService";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
@@ -57,69 +56,71 @@ export function AiChat() {
   };
 
   return (
-    <Card className="w-full max-w-3xl mx-auto">
-      <CardHeader>
-        <CardTitle>Chat with AI Assistant</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4 mb-4 h-[400px] overflow-y-auto p-4 border rounded-md">
+    <div className="w-full">
+      <h2 className="text-2xl font-semibold text-white/90 mb-4">Chat with AI Assistant</h2>
+      
+      <div className="flex flex-col space-y-4">
+        <div className="bg-[#0f213a] rounded-lg border border-gray-700 p-4 h-[400px] overflow-y-auto">
           {messages.length === 0 ? (
-            <div className="text-center text-muted-foreground py-8">
-              Start a conversation with the AI assistant
+            <div className="flex items-center justify-center h-full text-gray-400">
+              Start a conversation with the AI assistant.
             </div>
           ) : (
-            messages.map((message, index) => (
-              <div
-                key={index}
-                className={`p-3 rounded-lg ${
-                  message.role === "assistant" 
-                    ? "bg-primary/10 ml-4" 
-                    : "bg-muted mr-4"
-                }`}
-              >
-                <p className="text-sm font-semibold mb-1">
-                  {message.role === "assistant" ? "AI Assistant" : "You"}
-                </p>
-                <p className="whitespace-pre-wrap">{message.content}</p>
-              </div>
-            ))
-          )}
-          {isLoading && (
-            <div className="flex items-center justify-center p-4">
-              <Loader2 className="h-6 w-6 animate-spin text-primary" />
-              <span className="ml-2">AI is thinking...</span>
+            <div className="space-y-4">
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={`p-3 rounded-lg ${
+                    message.role === "assistant" 
+                      ? "bg-[#1a2a47] border border-gray-700" 
+                      : "bg-[#172136] border border-gray-700"
+                  }`}
+                >
+                  <p className="text-sm font-semibold mb-1 text-gray-300">
+                    {message.role === "assistant" ? "AI Assistant" : "You"}
+                  </p>
+                  <p className="text-gray-200 whitespace-pre-wrap">{message.content}</p>
+                </div>
+              ))}
+              {isLoading && (
+                <div className="flex items-center justify-center p-4 text-gray-300">
+                  <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                  <span>AI is thinking...</span>
+                </div>
+              )}
             </div>
           )}
         </div>
-      </CardContent>
-      <CardFooter className="flex flex-col space-y-2">
-        <Textarea
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Type your message..."
-          className="w-full resize-none"
-          rows={3}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey) {
-              e.preventDefault();
-              handleSend();
-            }
-          }}
-          disabled={isLoading}
-        />
-        <Button 
-          onClick={handleSend} 
-          className="self-end" 
-          disabled={!input.trim() || isLoading}
-        >
-          {isLoading ? (
-            <>
-              <Loader2 className="h-4 w-4 animate-spin mr-2" />
-              Sending...
-            </>
-          ) : "Send"}
-        </Button>
-      </CardFooter>
-    </Card>
+        
+        <div className="flex space-x-2">
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Type a message..."
+            className="flex-1 bg-[#0f213a] border border-gray-700 rounded-lg px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                handleSend();
+              }
+            }}
+            disabled={isLoading}
+          />
+          
+          <Button
+            onClick={handleSend}
+            disabled={!input.trim() || isLoading}
+            className="bg-gray-600 hover:bg-gray-500 text-white px-6"
+          >
+            {isLoading ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                <span>Wait</span>
+              </>
+            ) : "Send"}
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 }

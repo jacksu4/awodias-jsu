@@ -23,7 +23,7 @@ export default function AiAssistant() {
         </p>
       </div>
       
-      <div className="w-full max-w-4xl bg-[#0a1625] bg-opacity-80 rounded-xl border border-gray-700 shadow-2xl p-8 mx-auto">
+      <div className="w-full max-w-4xl bg-[#0f1729] rounded-xl border border-gray-700 shadow-2xl p-8 mx-auto">
         <AiChat />
         
         <div className="mt-8 text-center text-gray-400">
