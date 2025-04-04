@@ -1,8 +1,14 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { 
+  Sheet, 
+  SheetContent, 
+  SheetTrigger,
+  SheetHeader 
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
