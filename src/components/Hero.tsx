@@ -1,4 +1,5 @@
-import { ArrowDown } from "lucide-react";
+
+import { ArrowDown, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -96,8 +97,13 @@ const Hero = () => {
           <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white/40 hover:bg-white/10 backdrop-blur-sm transform transition-transform hover:scale-105">
             <a href="#contact">Contact Me</a>
           </Button>
-          <Button asChild size="lg" className="bg-gradient-to-r from-mountain-blue to-purple-400 text-white hover:opacity-90 backdrop-blur-sm border border-white/20 transform transition-transform hover:scale-105">
-            <Link to="/ai-assistant">Personal AI Assistant</Link>
+          <Button asChild size="lg" className="relative bg-gradient-to-r from-purple-400/20 to-pink-400/20 text-white backdrop-blur-sm transform transition-transform hover:scale-105 group overflow-hidden">
+            <Link to="/ai-assistant" className="flex items-center gap-2 z-10 relative">
+              <Zap className="h-4 w-4 text-yellow-300" />
+              <span>JS.AI</span>
+            </Link>
+            <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity"></span>
+            <span className="absolute -inset-px rounded-md bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500"></span>
           </Button>
         </div>
       </div>
