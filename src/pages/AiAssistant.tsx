@@ -55,9 +55,7 @@ export default function AiAssistant() {
         </div>
         
         <p className="text-gray-300 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed">
-          Ask me anything about Jingcheng,
-          or anything else. This AI is 
-          still in development.
+          Ask me whatever you want! I’m still in development and going through a bit of fine-tuning magic ✨
         </p>
       </div>
       
