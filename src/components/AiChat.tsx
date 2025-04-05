@@ -1,9 +1,11 @@
+
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { generateText } from "@/services/togetherAiService";
 import { toast } from "sonner";
 import { Loader2, BrainCircuit, User, Send, ChevronDown } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
+import ReactMarkdown from "react-markdown";
 
 interface Message {
   content: string;
@@ -16,7 +18,6 @@ export function AiChat() {
   const [isLoading, setIsLoading] = useState(false);
   const [displayedContent, setDisplayedContent] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [isUserScrolling, setIsUserScrolling] = useState(false);
   
   const messagesContainerRef = useRef<HTMLDivElement>(null);
   const currentMessageRef = useRef<string>("");
@@ -150,13 +151,13 @@ export function AiChat() {
                   </div>
 
                   {message.role === "assistant" && index === messages.length - 1 && isTyping ? (
-                    <p className="text-white whitespace-pre-wrap">
-                      {displayedContent}
-                    </p>
+                    <div className="text-white markdown-content">
+                      <ReactMarkdown>{displayedContent}</ReactMarkdown>
+                    </div>
                   ) : (
-                    <p className="text-white whitespace-pre-wrap">
-                      {message.content}
-                    </p>
+                    <div className="text-white markdown-content">
+                      <ReactMarkdown>{message.content}</ReactMarkdown>
+                    </div>
                   )}
                 </div>
               ))}
@@ -204,7 +205,7 @@ export function AiChat() {
           <Button
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white h-[50px] px-6 rounded-lg shadow-lg shadow-purple-900/20 self-center"
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white h-[50px] px-6 rounded-lg shadow-lg shadow-purple-900/20"
           >
             {isLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
