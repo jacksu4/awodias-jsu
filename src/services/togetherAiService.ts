@@ -25,7 +25,7 @@ export async function generateText(prompt: string, options: Partial<TogetherAiOp
     const API_KEY = "3669d4ffa6efbc1a7d2ad2da56b97d8cd0be343b66419194bbd386a329248335";
     
     const defaultOptions: TogetherAiOptions = {
-      model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
+      model: "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
       max_tokens: 1024,
       temperature: 0.7,
       top_p: 0.95,
