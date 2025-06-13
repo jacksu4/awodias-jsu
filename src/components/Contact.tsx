@@ -107,16 +107,16 @@ const Contact = () => {
                 Current Location
               </h3>
               <p className="text-white/80">
-                Sunnyvale, California<br />
-                United States
+                Hong Kong<br />
+                Special Administrative Region
               </p>
               
               <h3 className="text-xl font-heading font-semibold mt-8 mb-4">
-                Moving Soon To
+                Current Studies
               </h3>
               <p className="text-white/80">
-                Hong Kong<br />
-                <span className="text-sm italic">(HKU Part-time MBA Student & CFA L2 Candidate)</span>
+                MBA Student at CUHK<br />
+                <span className="text-sm italic">(The Chinese University of Hong Kong)</span>
               </p>
             </div>
           </div>

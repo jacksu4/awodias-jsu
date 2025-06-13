@@ -12,6 +12,13 @@ type EducationProps = {
 
 const educationExperience: EducationProps[] = [
   {
+    institution: "The Chinese University of Hong Kong (CUHK)",
+    degree: "Master of Business Administration (MBA)",
+    location: "Hong Kong SAR",
+    period: "2024 - 2026 (Expected)",
+    details: "Current student focusing on finance and investment strategies"
+  },
+  {
     institution: "Rice University",
     degree: "Master of Computer Science",
     location: "Houston, TX",
