@@ -62,10 +62,10 @@ const About = () => {
           
           <div className="space-y-6 lg:col-span-2">
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a 25-year-old Software Engineer from Shenzhen, China, now based in Hong Kong. I earned my Computer Science degrees from UC Irvine (BS) and Rice University (MS). With a strong foundation in both academic knowledge and practical experience, I've been focusing on developing innovative solutions that bridge technology and business needs.
+              I'm a 25-year-old Software Engineer from Shenzhen, China. I earned my Computer Science degrees from UC Irvine (BS) and Rice University (MS). With a strong foundation in both academic knowledge and practical experience, I've been focusing on developing innovative solutions that bridge technology and business needs.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Having worked at BILL (NYSE: BILL) in the fintech industry, I've successfully transitioned into investment and relocated to Hong Kong. I'm now pursuing an MBA at The Chinese University of Hong Kong (CUHK) to further develop my business acumen and investment expertise. This career evolution allows me to combine my technical background with my passion for finance and business strategy.
+              Having worked at BILL (NYSE: BILL) in the fintech industry, I've successfully transitioned into investment. I'm currently based in Shenzhen, China, preparing for the CFA Level 3 exam to further develop my investment expertise. This career evolution allows me to combine my technical background with my passion for finance and business strategy.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               This next chapter is about integration — of tech, finance, and global perspective. I'm always open to connecting with people who think differently and build boldly.
@@ -98,7 +98,6 @@ const About = () => {
                 <div className="text-gray-700">
                   <div>BS in Computer Science (UC Irvine)</div>
                   <div>MS in Computer Science (Rice University)</div>
-                  <div>MBA (CUHK, current)</div>
                 </div>
               </li>
               <li className="flex items-start">
@@ -107,7 +106,7 @@ const About = () => {
               </li>
               <li className="flex items-start">
                 <span className="font-medium text-gray-900 min-w-28">Current Focus:</span>
-                <span className="text-gray-700">MBA Student & Aspiring Investor in Hong Kong</span>
+                <span className="text-gray-700">CFA Level 3 Candidate & Aspiring Investor</span>
               </li>
             </ul>
           </Card>

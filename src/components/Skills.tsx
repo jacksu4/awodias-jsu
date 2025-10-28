@@ -51,7 +51,7 @@ const Skills = () => {
     }
   ];
 
-  const certificates = ["HKSI Paper 1 passed", "CFA level 1 passed"];
+  const certificates = ["HKSI Paper 1 passed", "CFA Level 1 passed", "CFA Level 2 passed"];
 
   return (
     <section id="skills" className="py-20 bg-gray-50">

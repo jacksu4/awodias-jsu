@@ -107,16 +107,16 @@ const Contact = () => {
                 Current Location
               </h3>
               <p className="text-white/80">
-                Hong Kong<br />
-                Special Administrative Region
+                Shenzhen, China<br />
+                Guangdong Province
               </p>
               
               <h3 className="text-xl font-heading font-semibold mt-8 mb-4">
-                Current Studies
+                Current Focus
               </h3>
               <p className="text-white/80">
-                MBA Student at CUHK<br />
-                <span className="text-sm italic">(The Chinese University of Hong Kong)</span>
+                CFA Level 3 Candidate<br />
+                <span className="text-sm italic">(Preparing for CFA Level 3 Examination)</span>
               </p>
             </div>
           </div>

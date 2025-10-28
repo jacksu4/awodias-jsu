@@ -1,6 +1,6 @@
 
 import { useState, useRef, useEffect } from "react";
-import { generateText } from "@/services/togetherAiService";
+import { streamChat } from "@/services/chatService";
 import { toast } from "sonner";
 import { Message } from "./chat/types";
 import { MessageContainer } from "./chat/MessageContainer";
@@ -67,30 +67,29 @@ export function AiChat() {
     setIsLoading(true);
     autoScrollRef.current = true;
 
-    try {
-      const conversationContext = messages.map(msg => 
-        `${msg.role === 'user' ? 'Human' : 'Assistant'}: ${msg.content}`
-      ).join('\n');
-      
-      const prompt = `${conversationContext}${conversationContext ? '\n' : ''}Human: ${userMessage.content}\n\nAssistant: `;
-      
-      const response = await generateText(prompt, {
-        temperature: 0.7,
-        max_tokens: 1024,
-      });
-
-      const assistantMessage: Message = {
-        content: response.trim(),
-        role: "assistant"
-      };
-
-      setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      console.error("Error sending message:", error);
-      toast.error("Failed to generate response. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
+    let assistantContent = "";
+    
+    await streamChat({
+      messages: [...messages, userMessage],
+      onDelta: (chunk) => {
+        assistantContent += chunk;
+        setMessages(prev => {
+          const last = prev[prev.length - 1];
+          if (last?.role === "assistant") {
+            return prev.map((m, i) => (i === prev.length - 1 ? { ...m, content: assistantContent } : m));
+          }
+          return [...prev, { role: "assistant", content: assistantContent }];
+        });
+      },
+      onDone: () => {
+        setIsLoading(false);
+      },
+      onError: (error) => {
+        console.error("Error sending message:", error);
+        toast.error("Failed to generate response. Please try again.");
+        setIsLoading(false);
+      }
+    });
   };
 
   const scrollToBottom = () => {
