@@ -6,6 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  message: z.string().trim().min(1, "Message is required").max(5000, "Message must be less than 5000 characters")
+});
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,8 +32,11 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
+      // Validate form data
+      const validatedData = contactSchema.parse(formData);
+      
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData
+        body: validatedData
       });
 
       if (error) {
@@ -41,8 +51,12 @@ const Contact = () => {
         message: ""
       });
     } catch (error) {
-      console.error("Error sending message:", error);
-      toast.error("Failed to send message. Please try again or email me directly.");
+      if (error instanceof z.ZodError) {
+        toast.error(error.errors[0].message);
+      } else {
+        console.error("Error sending message:", error);
+        toast.error("Failed to send message. Please try again or email me directly.");
+      }
     } finally {
       setIsSubmitting(false);
     }
