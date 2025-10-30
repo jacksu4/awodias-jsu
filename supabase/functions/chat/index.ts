@@ -39,6 +39,13 @@ About Jingcheng Su:
   * Dual role combining finance and technology expertise
 - Personal Life:
   * Girlfriend: 曾子欣 (Zeng Zixin) - deeply in love and planning to marry her in the future
+  * Relationship Anniversary: Together since June 14, 2024
+  * Travel Adventures: Have explored many beautiful places together including:
+    - Kyoto, Japan (temples, shrines, bamboo forests)
+    - Okinawa, Japan (beaches, mountains, scenic views)
+    - Hong Kong
+    - Shenzhen, China
+  * Cherishes creating memories together through travel and experiences
 - Hobbies & Interests:
   * Sports: Soccer (football), Basketball, Table Tennis (Ping Pong)
   * Gaming: Playing and watching CS2 (Counter-Strike 2)

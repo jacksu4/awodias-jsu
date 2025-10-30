@@ -46,6 +46,56 @@ const Gallery = () => {
       alt: "BILL Team",
       caption: "Celebrating wins with the team at BILL"
     },
+    {
+      src: "/lovable-uploads/girlfriend-okinawa-night.jpeg",
+      alt: "Okinawa Night View",
+      caption: "Beautiful night view in Okinawa with Zixin"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-okinawa-sunset.jpeg",
+      alt: "Okinawa Sunset",
+      caption: "Sunset moments in Okinawa"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-okinawa-beach.jpeg",
+      alt: "Okinawa Beach",
+      caption: "Beach day in Okinawa"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-okinawa-mountain.jpeg",
+      alt: "Okinawa Mountain Views",
+      caption: "Mountain adventure in Okinawa"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-kyoto-temple.jpeg",
+      alt: "Kyoto Temple",
+      caption: "Exploring temples in Kyoto"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-kyoto-night.jpeg",
+      alt: "Kyoto Night",
+      caption: "Evening stroll in Kyoto"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-japan-cycling.jpeg",
+      alt: "Japan Cycling",
+      caption: "Cycling adventure in Japan"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-kyoto-shrine.jpeg",
+      alt: "Kyoto Shrine",
+      caption: "山頂 (Mountaintop) shrine visit in Kyoto"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-japan-restaurant.jpeg",
+      alt: "Japanese Cuisine",
+      caption: "Enjoying delicious Japanese food"
+    },
+    {
+      src: "/lovable-uploads/girlfriend-kyoto-bamboo.jpeg",
+      alt: "Kyoto Bamboo Forest",
+      caption: "Bamboo forest adventure in Kyoto"
+    },
   ];
 
   const openModal = (index: number) => {
